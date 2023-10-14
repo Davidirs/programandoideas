@@ -1,0 +1,38 @@
+.bg-light-blue {
+    background-color: #00f0ff;
+}
+
+.bg-blue {
+    background-color: #47B2E4
+}
+
+.bg-dark-blue {
+    background-color: #37517e
+}
+.button{
+    height: 40px;
+    font-weight: bold;
+    font-size: large;
+    border: none;
+}
+.btn-gradient {
+    background: rgb(33, 37, 41);
+    background: linear-gradient(45deg, #37517e 0%, #47B2E4 100%);
+    color: white;
+}
+.br-20{
+
+    border-radius: 20px;
+}
+
+.bg-grey {
+    background-color: #AFB9BF;
+}
+
+.bg-light-grey {
+    background-color: #f3f5fa;
+}
+
+.bg-white {
+    background-color: white;
+}
