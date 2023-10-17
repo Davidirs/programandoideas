@@ -9,7 +9,7 @@ if (currentPage.includes("conocenos.html")) {
   document.getElementById("proyectos").classList.add("active-tab");
 }
 
-let redirectToSignIn = () => {
+/* let redirectToSignIn = () => {
   window.location.href = "/pages/sign-in-out.html";
 };
 let boton = document.getElementById('signButtonDesktop')
@@ -17,4 +17,4 @@ boton.addEventListener('click',redirectToSignIn)
 
 let boton2 = document.getElementById('signButtonMobile')
 boton2.addEventListener('click',redirectToSignIn)
-
+ */
