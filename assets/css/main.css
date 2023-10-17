@@ -8,7 +8,6 @@
 
 .bg-dark-blue {
     background-color: #37517e;
-    color:white;
 }
 .button{
     text-decoration: none;
@@ -63,4 +62,7 @@
 footer a{
     color: white;
     text-decoration: none;
+}
+.color-white{
+    color: white;
 }
