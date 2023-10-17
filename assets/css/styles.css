@@ -1,14 +1,17 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
-}
+} */
 /* nav{
     background-color: #8393ae;
 } */
-l{
+/* l{
     color: #01ecfc;
-}
+} */
 
+h2{
+    margin-bottom: -60px;
+}
 
 .active-tab {
     font-weight: bold; 
