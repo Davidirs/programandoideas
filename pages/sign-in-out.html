@@ -11,6 +11,7 @@
 
     <!-- Add Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body class="bg-dark-blue d-flex justify-content-center align-items-center p-md-5" >
     <section  class="bg-white col-12 col-sm-8 col-md-6 br-20">
@@ -24,7 +25,7 @@
                     <button type="submit" class="button br-20 col-6 btn-gradient">Login</button>
                     <button type="submit" class="button br-20 col-6 ">Signup</button>
                 </div>
-                <form>
+                <form id="login-form">
                     <div class="mb-3">
                         <label for="email" class="form-label">Email Address</label>
                         <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp" placeholder="Email" required>
@@ -39,6 +40,21 @@
                     </div>
                     <button type="submit" class="button br-20 btn-gradient col-12">Login</button>
                 </form>
+                <div class="m-2">
+
+                
+                <button type="button" id="googleLogin" class="btn btn-info">
+                    <img src="../assets/img/logo-google.png" alt="" class="logo">
+                    Google
+                </button>
+                <button type="button" id="facebookLogin" class="btn btn-info">
+                    <img src="../assets/img/logo-facebook.png" alt="" class="logo">
+                    Facebook
+                </button>
+                <button type="button" id="githubLogin" class="btn btn-info">
+                    <img src="../assets/img/logo-github.png" alt="" class="logo">
+                    GitHub
+                </button></div>
             </div>
         </div>
     </div>
@@ -69,6 +85,7 @@
         </div>
     </div>
 </section>
-
+<!-- Toastify -->
+<script type= "text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <!-- Add Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha
