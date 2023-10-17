@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* nav{
+    background-color: #8393ae;
+} */
+l{
+    color: #01ecfc;
+}
+
+
+.active-tab {
+    font-weight: bold; 
+    color: #11bfd8; /* Cambia este color según tus preferencias */
+    /* Otros estilos según tus preferencias */
+  }
