@@ -13,65 +13,238 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container d-flex">
-            <a class="navbar-brand" href="#">ProIdeas</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+
+    <section class="bg-dark-blue">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container d-flex">
+                <a class="navbar-brand" href="#">ProIdeas</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
                 </form>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Conócenos</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Proyectos
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item logged-out">
-                        <a class="nav-link" href="/pages/sign-in-out.html">Acceder</a>
-                    </li>
-                    <li class="nav-item dropdown logged-in">
-                        <img src="/assets/img/perfil.png" alt="" id="logo" class="logo">
-                        <!-- <a class="nav-link" href="#" id="logout">Cerrar sesión</a> -->
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" id="usuario">
-                            Usuario
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Perfil</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" id="logout">Cerrar sesión</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Conócenos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Proyectos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item logged-out">
+                            <a class="nav-link" href="pages/sign-in-out.html">Acceder</a>
+                        </li>
+                        <li class="nav-item dropdown logged-in">
+                            <img src="/assets/img/perfil.png" alt="" id="logo" class="logo">
+                            <!-- <a class="nav-link" href="#" id="logout">Cerrar sesión</a> -->
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" id="usuario">
+                                Usuario
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#" id="logout">Cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
 
+                </div>
+            </div>
+        </nav>
+        <div class="row p-5">
+
+            <div class="col-12 col-md-6">
+                <img src="assets/img/idea.png" alt="" class="img-principal active">
+                <img src="assets/img/post.png" alt="" class="img-principal">
+                <img src="assets/img/developers.png" alt="" class="img-principal">
+                <img src="assets/img/investor.png" alt="" class="img-principal">
+                <img src="assets/img/checked.png" alt="" class="img-principal">
+            </div>
+
+            <div class="col-12 col-md-6 text-center">
+
+                <h1>Comparte tu idea,
+                    Conoce desarrolladores,
+                    Conoce Inversionistas
+                    y Hazlo Realidad.</h1>
+                <p>
+                    Así de fácil... Las ideas se hacen realidad.</p>
+                <a href="pages/sign-in-out.html" class="button br-20 btn-gradient">Empecemos</a>
             </div>
         </div>
-    </nav>
-    <h1>Hello World de Programando ideas</h1>
+    </section>
+
+<section id="conocenos" class="p-5">
+    <h1 class="text-center">Conócenos</h1>
+    <h5>¡Bienvenido a Programando Ideas</h5>
+    <p>En Programando ideas, estamos comprometidos a democratizar el proceso creativo y de desarrollo, permitiendo a las  mentes creativas compartir sus ideas y conectarse con los recursos  adecuados para llevarlas a la realidad. Creemos en el poder de la colaboración y la inversión estratégica para transformar visiones en soluciones tangibles.</p>
+    
+    <div class="row d-flex justify-content-between">
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.nubedigital.mx/flexo/assets//imagenesblog/ogimage/Que-es-una-herramienta4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Plataforma de Colaboración</h5>
+              <p class="card-text">Facilitamos la colaboración entre ideadores, desarrolladores y inversionistas, creando un espacio donde las ideas pueden florecer con el apoyo de la comunidad.</p>
+              <a href="#" class="button br-20 btn-gradient">Ver más</a>
+            </div>
+          </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://gestioneducativa.educaweb.com/wp-content/uploads/2016/04/Ejemplos-de-proyectos-educativos.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Proyectos Innovadores</h5>
+              <p class="card-text">Descubre una amplia gama de ideas innovadoras en diseño y desarrollo web y móvil. Encuentra inspiración y oportunidades para contribuir a proyectos que te apasionen.</p>
+              <a href="#" class="button br-20 btn-gradient">Ver más</a>
+            </div>
+          </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.iestrategicas.com/wp/wp-content/uploads/2015/08/inversion-financiera-2-560x400.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Inversiones Estratégicas</h5>
+              <p class="card-text">Conectamos a emprendedores con inversionistas dispuestos a respaldar ideas prometedoras. Creamos un entorno donde la financiación adecuada puede hacer que los sueños se conviertan en realidad.</p>
+              <a href="#" class="button br-20 btn-gradient">Ver más</a>
+            </div>
+          </div>
+    </div>
+
+<div class="text-center">
+
+    <h5>Nuestro compromiso</h5>
+    <p>
+        En Programando Ideas, nos esforzamos por mantener altos estándares de transparencia, seguridad y eficiencia. Valoramos la confianza de nuestra comunidad y trabajamos incansablemente para crear una plataforma confiable y valiosa para todos.
+    </p>
+</div>
+
+
+</section>
+<section class="bg-light-grey text-center">
+<h1>Proyectos</h1>
+
+<ul class="nav  nav-pills justify-content-center bg-dark-blue">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Todos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Web</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">App</a>
+    </li>
+    
+  </ul>
+
+  <!-- Gallery -->
+<div class="row p-5">
+    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Boat on Calm Water"
+      />
+  
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Wintry Mountain Landscape"
+      />
+    </div>
+  
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Mountains in the Clouds"
+      />
+  
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Boat on Calm Water"
+      />
+    </div>
+  
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Waves at Sea"
+      />
+  
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Yosemite National Park"
+      />
+    </div>
+    <a href="#" class="button br-20 btn-gradient">Ver todos</a>
+</div>
+<!-- Gallery -->
+</section>
+
+<footer class="bg-dark-blue p-5">
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-3">
+            <h2>PROGRAMANDO IDEAS</h2>
+            <a href="">Teléfono: +1 123 123 123</a>
+            <a href="">Email: programandoideas@correo.com</a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <h2>Links útiles</h2>
+            
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Login</a></li>
+                <li><a href="">Proyectos</a></li>
+                <li><a href="">Contáctanos</a></li>
+            </ul>
+
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <h2>Nuestros servicios</h2>
+            <ul>
+                <li><a href="">Web</a></li>
+                <li><a href="">Mobile</a></li>
+                <li><a href="">Apps</a></li>
+                <li><a href="">Diseños</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <h2>Nuestras redes</h2>
+            <p>Siguenos en nuestras redes sociales</p>
+            <ul class="d-flex justify-content-between">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+            </ul>
+        </div>
+    </div>
+    <p class="text-center">Programando ideas 2023 - Derechos reservados by TEAM BLUE 1</p>
+</footer>
+        <!-- Insertar bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Insertar FontAwesome -->
+    <script src="https://kit.fontawesome.com/9fd95bcc65.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

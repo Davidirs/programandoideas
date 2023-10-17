@@ -7,9 +7,13 @@
 }
 
 .bg-dark-blue {
-    background-color: #37517e
+    background-color: #37517e;
+    color:white;
 }
 .button{
+    text-decoration: none;
+    padding: 5px 20px;
+    min-width: 250px;
     height: 40px;
     font-weight: bold;
     font-size: large;
@@ -42,3 +46,21 @@
     border-radius: 50%;
 }
 
+/*CAMBIANDO PROPIEDADES DE BOOTSTRAP*/
+.nav-link, .navbar-brand{
+    color: white;
+}
+.nav-link.active{
+    color: #00f0ff !important;
+}
+.img-principal{
+    height: 100px;
+    transition: 2s;
+}
+.img-principal.active{
+    height: 150px;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
