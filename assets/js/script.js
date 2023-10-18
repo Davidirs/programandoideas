@@ -1,4 +1,5 @@
 // Obtén el elemento actual basado en la página actual o alguna lógica específica
+/*
 const currentPage = window.location.href;
 
 if (currentPage.includes("conocenos.html")) {
@@ -9,7 +10,7 @@ if (currentPage.includes("conocenos.html")) {
   document.getElementById("proyectos").classList.add("active-tab");
 }
 
-/* let redirectToSignIn = () => {
+ let redirectToSignIn = () => {
   window.location.href = "/pages/sign-in-out.html";
 };
 let boton = document.getElementById('signButtonDesktop')

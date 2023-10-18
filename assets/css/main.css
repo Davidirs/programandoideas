@@ -53,11 +53,19 @@
     color: #00f0ff !important;
 }
 .img-principal{
-    height: 100px;
+    height: 50px;
     transition: 2s;
+    display: block;
 }
 .img-principal.active{
-    height: 150px;
+    scale: 4;
+    transform: translateX(50px);
+}
+.resaltar{
+    transition: 1s;
+}
+.resaltada{
+    color: #00f0ff;
 }
 footer a{
     color: white;
