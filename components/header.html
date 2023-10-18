@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg fs-5 bg-dark-blue">
+    <div class="container d-flex">
+        <img src="/assets/img/Webp.net-resizeimage.png" alt="logo" width="120"/><!--  height="50" -->
+        <!-- Esta imagen debe ser cargada desde js para no tener conflicto con los links -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/" id="inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#conocenos-section"id="conocenos">Conócenos</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" id="proyectos">
+                        Proyectos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#proyectos-section" >Sección proyectos</a></li>
+                        <li><a class="dropdown-item" href="/pages/proyectos.html">Todos los proyectos</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item logged-out hidden">
+                    <a class="nav-link rounded-pill border border-2 border-success" href="/pages/sign-in-out.html">Acceder</a>
+                </li>
+                <li class="nav-item dropdown logged-in align-items-center hidden">
+                    <img src="/assets/img/perfil.png" alt="" id="logo" class="logo">
+                    
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" id="usuario">
+                        Usuario
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                        <li>
+                        <li><a class="dropdown-item" href="/pages/publicar-idea.html">Publicar Idea</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#" id="logout">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>

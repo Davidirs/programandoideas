@@ -20,64 +20,9 @@
 <body>
 
     <section class="bg-dark-blue">
-        
-        <nav class="navbar navbar-expand-lg fs-5"style="background-color: #8393ae">
-            <div class="container d-flex">
-                <img
-                  src="/assets/img/Webp.net-resizeimage.png"
-                  alt="logo"
-                  width="120"
-                /><!--  height="50" -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0 ">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#" id="inicio">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#conocenos-section"id="conocenos">Conócenos</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" id="proyectos">
-                                Proyectos
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#proyectos-section" >Sección proyectos</a></li>
-                                <li><a class="dropdown-item" href="pages/proyectos.html">Todos los proyectos</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item logged-out">
-                            <a class="nav-link rounded-pill border border-2 border-success" href="pages/sign-in-out.html">Acceder</a>
-                        </li>
-                        <li class="nav-item dropdown logged-in align-items-center">
-                            <img src="/assets/img/perfil.png" alt="" id="logo" class="logo">
-                            <!-- <a class="nav-link" href="#" id="logout">Cerrar sesión</a> -->
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" id="usuario">
-                                Usuario
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Perfil</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#" id="logout">Cerrar sesión</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
+        <div id="header">
+          
+        </div>
         <div class="row p-5 color-white">
 
             <div class="col-12 col-md-6">
@@ -108,7 +53,7 @@
     
     <div class="row d-flex justify-content-evenly">
         <div class="card" style="width: 18rem;">
-            <img src="https://www.nubedigital.mx/flexo/assets//imagenesblog/ogimage/Que-es-una-herramienta4.jpg" class="card-img-top" alt="...">
+            <img src="assets/img/plataforma-de-colaboracion.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Plataforma de Colaboración</h5>
               <p class="card-text">Facilitamos la colaboración entre ideadores, desarrolladores y inversionistas, creando un espacio donde las ideas pueden florecer con el apoyo de la comunidad.</p>
@@ -116,7 +61,7 @@
             </div>
           </div>
         <div class="card" style="width: 18rem;">
-            <img src="https://gestioneducativa.educaweb.com/wp-content/uploads/2016/04/Ejemplos-de-proyectos-educativos.jpg" class="card-img-top" alt="...">
+            <img src="assets/img/Proyectos-innovadores.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Proyectos Innovadores</h5>
               <p class="card-text">Descubre una amplia gama de ideas innovadoras en diseño y desarrollo web y móvil. Encuentra inspiración y oportunidades para contribuir a proyectos que te apasionen.</p>
@@ -124,7 +69,7 @@
             </div>
           </div>
         <div class="card" style="width: 18rem;">
-            <img src="https://www.iestrategicas.com/wp/wp-content/uploads/2015/08/inversion-financiera-2-560x400.jpg" class="card-img-top" alt="...">
+            <img src="assets/img/Inversiones-estrategicas.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Inversiones Estratégicas</h5>
               <p class="card-text">Conectamos a emprendedores con inversionistas dispuestos a respaldar ideas prometedoras. Creamos un entorno donde la financiación adecuada puede hacer que los sueños se conviertan en realidad.</p>
@@ -207,51 +152,16 @@
 <!-- Gallery -->
 </section>
 
-<footer class="bg-dark-blue p-5 color-white">
-    <div class="row">
-        <div class="col-12 col-sm-6 col-md-3">
-            <h2>PROGRAMANDO IDEAS</h2>
-            <a href="">Teléfono: +1 123 123 123</a>
-            <a href="">Email: programandoideas@correo.com</a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-3">
-            <h2>Links útiles</h2>
-            
-            <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Login</a></li>
-                <li><a href="">Proyectos</a></li>
-                <li><a href="">Contáctanos</a></li>
-            </ul>
+<div id="footer">
 
-        </div>
-        <div class="col-12 col-sm-6 col-md-3">
-            <h2>Nuestros servicios</h2>
-            <ul>
-                <li><a href="">Web</a></li>
-                <li><a href="">Mobile</a></li>
-                <li><a href="">Apps</a></li>
-                <li><a href="">Diseños</a></li>
-            </ul>
-        </div>
-        <div class="col-12 col-sm-6 col-md-3">
-            <h2>Nuestras redes</h2>
-            <p>Siguenos en nuestras redes sociales</p>
-            <ul class="d-flex justify-content-between">
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-github"></i></a>
-            </ul>
-        </div>
-    </div>
-    <p class="text-center">Programando ideas 2023 - Derechos reservados by TEAM BLUE 1</p>
-</footer>
+</div>
         <!-- Insertar bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Insertar FontAwesome -->
     <script src="https://kit.fontawesome.com/9fd95bcc65.js" crossorigin="anonymous"></script>
     <!-- script -->
     <script src="assets/js/script.js" type="module"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </body>
 </html>

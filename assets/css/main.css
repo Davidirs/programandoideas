@@ -12,7 +12,7 @@
 .button{
     text-decoration: none;
     padding: 5px 20px;
-    min-width: 250px;
+    min-width: 200px;
     height: 40px;
     font-weight: bold;
     font-size: large;
@@ -64,5 +64,12 @@ footer a{
     text-decoration: none;
 }
 .color-white{
-    color: white;
+    color: white !important;
+}
+.change{
+    transition: 1s;
+}
+
+.hidden{
+    display: none;
 }
