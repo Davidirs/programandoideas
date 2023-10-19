@@ -1,6 +1,6 @@
 const imagenesPrincipales = [...document.querySelectorAll(".img-principal")];
         const resaltar = [...document.querySelectorAll(".resaltar")];
-        console.log(imagenesPrincipales[1])
+        
         let num = 0;
         const time = setInterval(() => {
           imagenesPrincipales[num].classList.remove("active");
