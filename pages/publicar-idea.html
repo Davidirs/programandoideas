@@ -1,151 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/img/favicon.png"
+      type="image/x-icon"
+    />
     <title>Publicar Idea</title>
     <!-- add main -->
 
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/main.css" />
     <script type="module" src="../assets/js/main.js"></script>
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <!-- Add Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
-    <div id="header">
-
-    </div>
+  <body>
+    <div id="header"></div>
 
     <main class="row">
-
-        <aside class="bg-dark-blue col-md-3 p-4">
-            <div class="accordion bg-light" id="accordionPanelsStayOpenExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                      Accordion Item #1
-                    </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                    <div class="accordion-body">
-                      <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                      Accordion Item #2
-                    </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                      <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                      Accordion Item #3
-                    </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
-                  </div>
-                </div>
+      <aside class="bg-dark-blue col-md-3 p-4">
+        <div class="accordion bg-light" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne"
+                aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseOne"
+              >
+                Nombre de la idea
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseOne"
+              class="accordion-collapse collapse show"
+            >
+              <div class="accordion-body">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Describe con una frase u oración tu idea, dejando claro el enfoque de la misma, esto puede cambiar"></textarea>
               </div>
-        </aside>
-        <section class="bg-light-grey col-md-9 p-4">
-            <h1>Publicar Idea</h1>
-            <label>¿Qué nombre tiene tu idea?</label>
-            <input type="text" name="nombre" id="nombre" class="rounded-pill w-100">
-
-            <label>Describe tu idea</label>
-            <input type="text" name="nombre" id="nombre" class="rounded-pill w-100">
-
-            <label>Tipo de proyecto</label>
-            <select name="select" class="rounded-pill w-100">
-                <option value="value1" selected>Web</option>
-                <option value="value2">Mobile</option>
-                <option value="value3">Diseño</option>
-            </select>
-            <hr>
-
-            <label>¿Qué necesitas de recurso humano?</label>
-            <input type="text" name="nombre" id="nombre" class="rounded-pill w-100">
-            <hr>
-
-            <label>Muestra los recursos de tu idea</label>
-            <div class="div">
-                <input id="image-picker0" type="file" accept="image/*" />
-                <input id="image-picker1" type="file" accept="image/*" />
-                <input id="image-picker2" type="file" accept="image/*" />
-                <input id="image-picker3" type="file" accept="image/*" />
             </div>
-            <picture class="d-flex justify-content-evenly">
-                <img src="../assets/img/idea.png" alt="" id="image-preview0" class="img-preview">
-                <img src="../assets/img/idea.png" alt="" id="image-preview1" class="img-preview">
-                <img src="../assets/img/idea.png" alt="" id="image-preview2" class="img-preview">
-                <img src="../assets/img/idea.png" alt="" id="image-preview3" class="img-preview">
-            </picture>
-            <hr>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo"
+              >
+                Describe tu idea
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseTwo"
+              class="accordion-collapse collapse"
+            >
+              <div class="accordion-body">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Describe tu idea y ayúdanos a entender a qué y quiénes va dirigido, resalta las problemáticas que van a ser solucionadas."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree"
+              >
+                Tipo de proyecto
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseThree"
+              class="accordion-collapse collapse"
+            >
+              <div class="accordion-body">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Describe..."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFour"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFour"
+              >
+                Recurso humano
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseFour"
+              class="accordion-collapse collapse"
+            >
+              <div class="accordion-body">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Describe..."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFive"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFive"
+              >
+                Muestra recursos
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseFive"
+              class="accordion-collapse collapse"
+            >
+              <div class="accordion-body">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Describe..."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseSix"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseSix"
+              >
+                Información para inversores
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseSix"
+              class="accordion-collapse collapse"
+            >
+              <div class="accordion-body">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Describe..."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseSeven"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseSeven"
+              >
+                Monto mínimo de inversión
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseSeven"
+              class="accordion-collapse collapse"
+            >
+              <div class="accordion-body">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Describe..."></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <section class="bg-light-grey col-md-9 p-4">
+        <h1>Publicar Idea</h1>
+        <label>¿Qué nombre tiene tu idea?</label>
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          class="rounded-pill w-100"
+        />
 
-            <label>Información para inversores</label>
-            <input type="text" name="nombre" id="nombre" class="rounded-pill w-100">
+        <label>Describe tu idea</label>
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          class="rounded-pill w-100"
+        />
 
-            <label>Monto mínimo de inversión</label>
-            <input type="text" name="nombre" id="nombre" class="rounded-pill w-100">
-            <hr>
+        <label>Tipo de proyecto</label>
+        <select name="select" class="rounded-pill w-100">
+          <option value="value1" selected>Web</option>
+          <option value="value2">Mobile</option>
+          <option value="value3">Diseño</option>
+        </select>
+        <hr />
 
+        <label>¿Qué necesitas de recurso humano?</label>
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          class="rounded-pill w-100"
+        />
+        <hr />
 
-            <a href="#" class="button br-20 btn-gradient">Publicar Idea</a>
-        </section>
+        <label>Muestra los recursos de tu idea</label>
+        <div class="div">
+          <input id="image-picker0" type="file" accept="image/*" />
+          <input id="image-picker1" type="file" accept="image/*" />
+          <input id="image-picker2" type="file" accept="image/*" />
+          <input id="image-picker3" type="file" accept="image/*" />
+        </div>
+        <picture class="d-flex justify-content-evenly">
+          <img
+            src="../assets/img/idea.png"
+            alt=""
+            id="image-preview0"
+            class="img-preview"
+          />
+          <img
+            src="../assets/img/idea.png"
+            alt=""
+            id="image-preview1"
+            class="img-preview"
+          />
+          <img
+            src="../assets/img/idea.png"
+            alt=""
+            id="image-preview2"
+            class="img-preview"
+          />
+          <img
+            src="../assets/img/idea.png"
+            alt=""
+            id="image-preview3"
+            class="img-preview"
+          />
+        </picture>
+        <hr />
+
+        <label>Información para inversores</label>
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          class="rounded-pill w-100"
+        />
+
+        <label>Monto mínimo de inversión</label>
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          class="rounded-pill w-100"
+        />
+        <hr />
+
+        <a href="#" class="button br-20 btn-gradient">Publicar Idea</a>
+      </section>
     </main>
 
-
-
-    <div id="footer">
-
-    </div>
+    <div id="footer"></div>
     <!-- Insertar bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Insertar FontAwesome -->
-    <script src="https://kit.fontawesome.com/9fd95bcc65.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/9fd95bcc65.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <style>
-        .img-preview {
-            width: 100px;
-        }
+      .img-preview {
+        width: 100px;
+      }
     </style>
     <script>
-        for (let i = 0; i < 4; i++) {
-            $("#image-picker" + i).change(function (event) {
-                readURL(this);
+      for (let i = 0; i < 4; i++) {
+        $("#image-picker" + i).change(function (event) {
+          readURL(this);
+        });
 
-            });
+        function readURL(input) {
+          if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-            function readURL(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
+            reader.onload = function (e) {
+              $("#image-preview" + i).attr("src", e.target.result);
+            };
 
-                    reader.onload = function (e) {
-                        $('#image-preview' + i).attr('src', e.target.result);
-                    }
-
-                    reader.readAsDataURL(input.files[0]);
-                }
-            }
+            reader.readAsDataURL(input.files[0]);
+          }
         }
+      }
     </script>
-</body>
-
+  </body>
 </html>
