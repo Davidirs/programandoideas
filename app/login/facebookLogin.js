@@ -1,6 +1,6 @@
 import { FacebookAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
-import { auth } from "./firebase.js";
-import { showMessage } from "./showMessage.js";
+import { auth } from "../firebase.js";
+import { showMessage } from "../showMessage.js";
 
 const facebookButton = document.querySelector("#facebookLogin")
 if (facebookButton) {
