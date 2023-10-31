@@ -9,7 +9,7 @@
   <!-- add main -->
 
   <link rel="stylesheet" href="../assets/css/main.css" />
-  <script type="module" src="../assets/js/main.js"></script>
+  <script type="module" src="../app/main.js"></script>
   <link rel="stylesheet" href="../assets/css/styles.css" />
   <!-- Add Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,7 +20,9 @@
 
 <body>
   <div id="header"></div>
-
+  <div class="d-flex justify-content-center align-items-center bg-img-proyect color-white">
+    <h1>PUBLICAR IDEA</h1>
+  </div>
   <main class="row">
     <aside class="bg-dark-blue col-md-3 p-4">
       <div class="accordion bg-light" id="accordionPanelsStayOpenExample">
@@ -130,13 +132,13 @@
       <h1>Publicar Idea</h1>
       <form id="post-form">
         <label>¿Qué nombre tiene tu idea?</label>
-        <input type="text" name="name" id="post-name" class="rounded-pill w-100"  placeholder="Nombre" />
+        <input type="text" name="name" id="post-name" class="br-20 p-2 w-100"  placeholder="Nombre"/>
 
         <label>Describe tu idea</label>
-        <input type="text" name="description" id="post-description" class="rounded-pill w-100" placeholder="Descripción de la idea"  />
+        <textarea type="text" name="description" id="post-description" class="br-20 p-2 w-100" placeholder="Descripción de la idea"></textarea>
 
         <label>Tipo de proyecto</label>
-        <select name="select" class="rounded-pill w-100" id="post-type">
+        <select name="select" class="br-20 p-2 w-100" id="post-type">
           <option value="Web" selected>Web</option>
           <option value="Mobile">Mobile</option>
           <option value="Diseño">Diseño</option>
@@ -144,7 +146,7 @@
         <hr />
 
         <label>¿Qué necesitas de recurso humano?</label>
-        <input type="text" name="infodeveloper" id="post-infodeveloper" class="rounded-pill w-100" />
+        <textarea type="text" name="infodeveloper" id="post-infodeveloper" class="br-20 p-2 w-100" ></textarea>
         <hr />
 
         <label>Muestra los recursos de tu idea</label>
@@ -155,21 +157,21 @@
           <input id="image-picker3" type="file" accept="image/*" "/>
         </div>
         <picture class="d-flex justify-content-evenly">
-          <img src="../assets/img/idea.png" alt="" id="image-preview0" class="img-preview" />
-          <img src="../assets/img/idea.png" alt="" id="image-preview1" class="img-preview" />
-          <img src="../assets/img/idea.png" alt="" id="image-preview2" class="img-preview" />
-          <img src="../assets/img/idea.png" alt="" id="image-preview3" class="img-preview" />
+          <img src="" alt="" id="image-preview0" class="img-preview" />
+          <img src="" alt="" id="image-preview1" class="img-preview" />
+          <img src="" alt="" id="image-preview2" class="img-preview" />
+          <img src="" alt="" id="image-preview3" class="img-preview" />
         </picture>
         <hr />
 
         <label>Información para inversores</label>
-        <input type="text" name="infoinvestor" id="post-infoinvestor" class="rounded-pill w-100" />
+        <textarea type="text" name="infoinvestor" id="post-infoinvestor" class="br-20 p-2 w-100" ></textarea>
 
         <label>Monto mínimo de inversión</label>
-        <input type="text" name="minamount" id="post-minamount" class="rounded-pill w-100" />
+        <input type="text" name="minamount" id="post-minamount" class="br-20 p-2 w-100" />
         
         <label>Monto máximo de inversión</label>
-        <input type="text" name="maxamount" id="post-maxamount" class="rounded-pill w-100" />
+        <input type="text" name="maxamount" id="post-maxamount" class="br-20 p-2 w-100" />
         <hr />
 
         <button  type="submit" id="btn-post" href="#" class="button br-20 btn-gradient">Publicar Idea</button>

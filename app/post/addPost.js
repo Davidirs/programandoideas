@@ -1,11 +1,12 @@
 import { addDoc, collection } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"
 import { db } from '../../app/firebase.js'
-import {showMessage } from './showMessage.js'
+import {showMessage } from '../showMessage.js'
 
 
 export const addPost = async (post) => {
     try {
         const docRef = await addDoc(collection(db, "posts"), {
+            user: post.user,
             name: post.name,
             description: post.description,
             type: post.type,

@@ -45,7 +45,8 @@
 .bg-img-proyect {
     width: 100%;
     height: 250px;
-    background: url("https://tjn-blog-images.s3.amazonaws.com/wp-content/uploads/2017/10/02133437/Untitled-design-810x380.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://tjn-blog-images.s3.amazonaws.com/wp-content/uploads/2017/10/02133437/Untitled-design-810x380.jpg");
+
     background-size: cover;
 }
 
@@ -101,7 +102,9 @@ footer a {
     display: none;
 }
 
-.img-miniatura {
-    margin: 2%;
-    width: 20%;
+.max-height-400{
+    height: 400px;
+}
+.max-height-90{
+    height: 90px;
 }
