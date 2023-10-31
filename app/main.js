@@ -3,8 +3,8 @@ import { getDocs, addDoc, collection } from "https://www.gstatic.com/firebasejs/
 
 import { auth, db } from './firebase.js'
 import { loginCheck } from './login/logginCheck.js'
-import {logout} from './login/logout.js'
-import {setupPost} from './post/postList.js'
+import { logout } from './login/logout.js'
+import { setupPost } from './post/postList.js'
 import './formularios/signupForm.js';
 import './formularios/signinForm.js'
 import './login/googleLogin.js'
@@ -30,9 +30,14 @@ onAuthStateChanged(auth, async (user) => {
         await logout();
 
         /* buscar docs */
-      const querySnapshot = await getDocs(collection(db, 'posts'));
-      setupPost(querySnapshot.docs);
-      
+        const currentPage = window.location.href;
+
+        if (currentPage.includes("proyectos.html")) {
+            console.log("pagina proyectos")
+            const querySnapshot = await getDocs(collection(db, 'posts'));
+            setupPost(querySnapshot.docs);
+        }
+
     } else {
         setupPost([]);
         console.log("NO está logueado")
