@@ -5,12 +5,14 @@ import { auth, db } from './firebase.js'
 import { loginCheck } from './login/logginCheck.js'
 import { logout } from './login/logout.js'
 import { setupPost } from './post/postList.js'
+import  './post/loadPost.js'
 import './formularios/signupForm.js';
 import './formularios/signinForm.js'
 import './login/googleLogin.js'
 import './login/facebookLogin.js'
 import './login/githubLogin.js'
 import '../assets/js/add-componets.js'
+import { loadPost } from "./post/loadPost.js";
 
 
 onAuthStateChanged(auth, async (user) => {
@@ -36,6 +38,11 @@ onAuthStateChanged(auth, async (user) => {
             console.log("pagina proyectos")
             const querySnapshot = await getDocs(collection(db, 'posts'));
             setupPost(querySnapshot.docs);
+        }
+        if (currentPage.includes("individual.html")) {
+            console.log("pagina proyecto individual")
+            //const querySnapshot = await getDocs(collection(db, 'posts'));
+            loadPost();
         }
 
     } else {

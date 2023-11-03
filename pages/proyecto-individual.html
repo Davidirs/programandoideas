@@ -19,57 +19,78 @@
 
   <div id="header"></div>
 
-  <section class="container m-4">
-    <h1>PROYECTO Individual</h1>
+  <section class="placeholder-glow  m-4">
+    <h1 id="name" class="placeholder">PROYECTO Individual</h1>
     <div class="d-flex justify-content-between">
-      <p>Publicación: <span>17/10/2023</span></p>
+      <p class="placeholder">Publicación: <span id="dateposted">17/10/2023</span></p>
       <p>|</p>
-      <p>Límite: <span>17/11/2023</span></p>
+      <p class="placeholder">Límite: <span id="datelimit">17/11/2023</span></p>
     </div>
   
   <div class="bg-dark-blue br-20 p-3">
-    <div class="d-flex flex-row br-20 justify-content-evenly max-height-400">
+   <!--  <div class="d-flex flex-row br-20 justify-content-evenly max-height-400">
       <div class="bg-white col-10 d-flex justify-content-center">
         <img src="../assets/img/checked.png" alt="${post.img1}" class="h-100">
       </div>
       <div class="d-flex flex-column justify-content-between ">
-        <img src="../assets/img/checked.png" alt="${post.img1}" class="bg-white max-height-90">
-        <img src="../assets/img/checked.png" alt="${post.img2}" class="bg-white max-height-90">
-        <img src="../assets/img/checked.png" alt="${post.img3}" class="bg-white max-height-90">
-        <img src="../assets/img/checked.png" alt="${post.img4}" class="bg-white max-height-90">
+        <img id="img1" src="../assets/img/checked.png" alt="${post.img1}" class="bg-white max-height-90">
+        <img id="img2" src="../assets/img/checked.png" alt="${post.img2}" class="bg-white max-height-90">
+        <img id="img3" src="../assets/img/checked.png" alt="${post.img3}" class="bg-white max-height-90">
+        <img id="img4" src="../assets/img/checked.png" alt="${post.img4}" class="bg-white max-height-90">
+      </div>
+    </div> -->
+    
+    <div class="d-flex justify-content-evenly  max-height-400">
+      <a class="placeholder col-10 d-flex justify-content-center align-items-center bg-white img-grande me-3">
+        <img id="imggrande" alt=""  class="h-100 w-100">
+      </a>
+      <div class="d-flex flex-column justify-content-between miniaturas">
+        <a class="placeholder d-flex justify-content-center align-items-center bg-white">
+          <img id="img1" alt=""  class=" w-100 max-height-90 img1">
+        </a>
+        <a class="d-flex justify-content-center align-items-center bg-white">
+          <img id="img2" alt=""  class=" w-100 max-height-90 img2">
+        </a>
+        <a class="d-flex justify-content-center align-items-center bg-white">
+          <img id="img3" alt=""  class=" w-100 max-height-90 img3">
+        </a>
+        <a class="d-flex justify-content-center align-items-center bg-white">
+          <img id="img4" alt=""  class=" w-100 max-height-90 img4">
+        </a>
+        
       </div>
     </div>
-  </div>
+    </div>
 </section>
 <section class="m-4">
   
   <h3 class="py-4">Descripción</h3>
   <div class="bg-white br-20 p-4">
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sint quae laborum rerum magnam quam ipsa
+    <p id="description" class="placeholder">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sint quae laborum rerum magnam quam ipsa
       laudantium vel? Fugiat sapiente architecto aliquam ut minus maxime voluptatibus, quasi quis ab dolore!</p>
     <div class="row">
 
-      <h2 class="col-6">Web</h2>
-      <h2 class="col-6 text-end">☆ ☆ ☆ ☆ ☆</h2>
+      <h2 id="type" class="placeholder col-6">Web</h2>
+      <h2  class="placeholder col-6 text-end"><span id="rating"></span> ☆ ☆ ☆ ☆ ☆</h2>
     </div>
     <div class="row  align-items-center">
 
       <div class="col-6 d-flex flex-wrap justify-content-evenly">
-        <a href="" class="button br-20 btn-gradient mb-2">Unirme como Desarrollador</a>
-        <a href="" class="button br-20 btn-gradient">Unirme como Inversor</a>
+        <a href="" class="placeholder button br-20 btn-gradient mb-2">Unirme como Desarrollador</a>
+        <a href="" class="placeholder button br-20 btn-gradient">Unirme como Inversor</a>
       </div>
-      <div class="col-6 text-end"> Fondo: 0.00 / 0.00 USD</div>
+      <div class="placeholder col-6 text-end"> Fondo: <span id="amount" >0.00</span> / <span id="maxamount">0.00</span>  USD</div>
     </div>
   </div>
   <h3 class="py-4">Recurso humano</h3>
   <div class="bg-white br-20 p-4">
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sint quae laborum rerum magnam quam ipsa
+    <p id="infodeveloper" class="placeholder">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sint quae laborum rerum magnam quam ipsa
       laudantium vel? Fugiat sapiente architecto aliquam ut minus maxime voluptatibus, quasi quis ab dolore!</p>
     
   </div>
   <h3 class="py-4">Información para los inversores</h3>
   <div class="bg-white br-20 p-4">
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sint quae laborum rerum magnam quam ipsa
+    <p id="infoinvestor" class="placeholder">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sint quae laborum rerum magnam quam ipsa
       laudantium vel? Fugiat sapiente architecto aliquam ut minus maxime voluptatibus, quasi quis ab dolore!</p>
     
   </div>
@@ -82,6 +103,7 @@
   <script src="/assets/js/script.js"></script>
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="../app/post/loadPost.js" type="module"></script>
 
 </body>
 

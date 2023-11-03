@@ -16,7 +16,8 @@ signupForm.addEventListener("submit", async(e)=>{
    const userCredential = await createUserWithEmailAndPassword(auth,email,password);
    console.log(userCredential);
    showMessage("Bienvenido " + userCredential.user.email, "sucess")
-   } catch (error) {
+   window.location.href = "/";   
+} catch (error) {
    switch (error.code) {
     case "auth/weak-password":
         showMessage("Contraseña inválida")
