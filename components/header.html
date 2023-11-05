@@ -1,40 +1,31 @@
 <nav class="navbar navbar-expand-lg fs-5 bg-dark-blue" data-bs-theme="dark">
     <div class="container d-flex">
-        <img src="/assets/img/Logo blanco.png" alt="logo" width="120"/><!--  height="50" -->
+        <img id="logoHeader" alt="logo" width="120" /><!--  height="50" -->
         <!-- Esta imagen debe ser cargada desde js para no tener conflicto con los links -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/" id="inicio">Inicio</a>
+                    <a class="nav-link pointer" aria-current="page" onclick="index()" id="inicio">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#conocenos-section"id="conocenos">Conócenos</a>
+                    <a class="nav-link pointer" onclick="conocenos()" id="conocenos">Conócenos</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false" id="proyectos">
+                <li class="nav-item ">
+                    <a class="nav-link pointer" id="proyectos" onclick="proyectos()">
                         Proyectos
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#proyectos-section" >Sección proyectos</a></li>
-                        <li><a class="dropdown-item" href="/pages/proyectos.html">Todos los proyectos</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="/pages/proyecto-individual.html">Proyecto individual</a></li>
-                    </ul>
                 </li>
                 <li class="nav-item logged-out hidden">
-                    <a class="nav-link rounded-pill border border-2 border-success" href="/pages/sign-in-out.html">Acceder</a>
+                    <a class="nav-link rounded-pill border border-2 border-success pointer"
+                        onclick="acceder()">Acceder</a>
                 </li>
                 <li class="nav-item dropdown logged-in align-items-center hidden">
-                    <img src="/assets/img/perfil.png" alt="" id="logo" class="logo">
-                    
+                    <img alt="" id="logo" class="logo">
+
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false" id="usuario">
                         Usuario
@@ -42,11 +33,11 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Perfil</a></li>
                         <li>
-                        <li><a class="dropdown-item" href="/pages/publicar-idea.html">Publicar Idea</a></li>
+                        <li><a class="dropdown-item" href="../pages/publicar-idea.html">Publicar Idea</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#" id="logout">Cerrar sesión</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="" id="logout">Cerrar sesión</a></li>
                     </ul>
                 </li>
             </ul>
@@ -54,27 +45,61 @@
         </div>
     </div>
 </nav>
-<!-- 
+
 <script>
-    const header = document.getElementById("header")
-    console.log(window.scrollY)
-    window.scrollY
-    if(window.scrollY >50){
-        header.style.position="fixed";
+    const currentPage = window.location.href;
+    if (currentPage.includes("conocenos.html")) {
+        document.getElementById("conocenos").classList.add("active-tab");
+    } else if (currentPage.includes("index.html")) {
+        document.getElementById("inicio").classList.add("active-tab");
+    } else if (currentPage.includes("proyectos.html")) {
+        document.getElementById("proyectos").classList.add("active-tab");
     }
-</script> -->
+    document.getElementById("logoHeader").setAttribute("src","../assets/img/logoblanco.png")
+    document.getElementById("logo").setAttribute("src","../assets/img/perfil.png")
+
+    function index() {
+        if (currentPage.includes("pages")) {
+            window.location.href = "../index.html";
+        }
+    }
+    function proyectos() {
+
+        if (currentPage.includes("pages")) {
+            window.location.href = "../pages/proyectos.html";
+        } else {
+            window.location.href = "#proyectos-section";
+        }
+    }
+    function conocenos() {
+
+        if (currentPage.includes("pages")) {
+            window.location.href = "../pages/conocenos.html";
+        } else {
+            window.location.href = "#conocenos-section";
+        }
+    }
+    function acceder() {
+        window.location.href = "../pages/sign-in-out.html";
+    }
+
+</script>
 
 <style>
     #header {
-        
 
-    width: 100%;
-    /* hacemos que la cabecera ocupe el ancho completo de la página */
-    left: 0;
-    /* Posicionamos la cabecera al lado izquierdo */
-    top: 0;
-    z-index: 99999;
-    position: sticky;
-    
-}
+
+        width: 100%;
+        /* hacemos que la cabecera ocupe el ancho completo de la página */
+        left: 0;
+        /* Posicionamos la cabecera al lado izquierdo */
+        top: 0;
+        z-index: 99999;
+        position: sticky;
+
+    }
+
+    .pointer {
+        cursor: pointer;
+    }
 </style>

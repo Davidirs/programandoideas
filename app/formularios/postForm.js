@@ -8,7 +8,6 @@ var imgList = [{}, {}, {}, {}]
 
 for (let i = 0; i < 4; i++) {
     $("#image-picker" + i).change(function (event) {
-        console.log(this);
         readURL(this);
     });
 
@@ -17,7 +16,6 @@ for (let i = 0; i < 4; i++) {
             var reader = new FileReader();
 
             reader.onload = async function (e) {
-                console.log("funcionando")
                 $("#image-preview" + i).attr("src", e.target.result);
                 const newName = input.files[0].lastModified + "-" + input.files[0].name;
 
