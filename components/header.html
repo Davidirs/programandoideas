@@ -55,8 +55,14 @@
     } else if (currentPage.includes("proyectos.html")) {
         document.getElementById("proyectos").classList.add("active-tab");
     }
-    document.getElementById("logoHeader").setAttribute("src","../assets/img/logoblanco.png")
-    document.getElementById("logo").setAttribute("src","../assets/img/perfil.png")
+    
+    if (currentPage.includes("pages")) {
+        document.getElementById("logoHeader").setAttribute("src","../assets/img/logoblanco.png")
+        document.getElementById("logo").setAttribute("src","../assets/img/perfil.png")
+    }else{
+        document.getElementById("logoHeader").setAttribute("src","assets/img/logoblanco.png")
+        document.getElementById("logo").setAttribute("src","assets/img/perfil.png")
+    }
 
     function index() {
         if (currentPage.includes("pages")) {
@@ -80,7 +86,12 @@
         }
     }
     function acceder() {
+        if (currentPage.includes("pages")) {
+            
         window.location.href = "../pages/sign-in-out.html";
+        } else {
+                    window.location.href = "pages/sign-in-out.html";
+        }
     }
 
 </script>
