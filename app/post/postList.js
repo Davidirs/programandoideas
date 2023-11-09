@@ -1,9 +1,11 @@
 import { imageList } from '../storage/imageList.js';
 const postList = document.querySelector(".posts");
+
 export const setupPost = (data) => {
+  
   if (data.length) {
     let html = "";
-    
+
     data.forEach(doc => {
       const post = doc.data()
       var id = doc.id;
@@ -32,20 +34,20 @@ export const setupPost = (data) => {
             </div>
             <div class="col-4 d-flex flex-column justify-content-between">
               <a class="col-12 d-flex justify-content-center align-items-center bg-white img-grande">
-                <img src="${post.img1}" alt=""  class="">
+                <img src="${post.img1}" alt=""  class="" id="${id}imggrande">
               </a>
               <div class="d-flex justify-content-between miniaturas">
-                <a class="d-flex justify-content-center align-items-center bg-white img-miniatura">
-                  <img src="${post.img1}" alt=""  class=" img1">
+                <a class="d-flex justify-content-center align-items-center bg-white img-miniatura pointer '${id}'img1"onclick="changeImg('${id}','${post.img1}')">
+                  <img src="${post.img1}" alt=""  class="img1">
                 </a>
-                <a class="d-flex justify-content-center align-items-center bg-white img-miniatura">
-                  <img src="${post.img2}" alt=""  class=" img2">
+                <a class="d-flex justify-content-center align-items-center bg-white img-miniatura pointer '${id}'img2"onclick="changeImg('${id}','${post.img2}')" >
+                  <img src="${post.img2}" alt=""  class="img2">
                 </a>
-                <a class="d-flex justify-content-center align-items-center bg-white img-miniatura">
-                  <img src="${post.img3}" alt=""  class=" img3">
+                <a class="d-flex justify-content-center align-items-center bg-white img-miniatura pointer '${id}'img3" onclick="changeImg('${id}','${post.img3}')" >
+                  <img src="${post.img3}" alt=""  class="img3">
                 </a>
-                <a class="d-flex justify-content-center align-items-center bg-white img-miniatura">
-                  <img src="${post.img4}" alt=""  class=" img4">
+                <a class="d-flex justify-content-center align-items-center bg-white img-miniatura pointer '${id}'img4"onclick="changeImg('${id}','${post.img4}')" >
+                  <img src="${post.img4}" alt=""  class="img4">
                 </a>
               
               </div>
@@ -55,15 +57,15 @@ export const setupPost = (data) => {
             `
       html += li;
 
+      
+
     });
-    if (postList) { postList.innerHTML = html }
+    if (postList) { postList.innerHTML = html 
+    
+    }
   } else {
 
     if (postList) { postList.innerHTML = `<h3>No hay publicaciones para mostrar, Inicia sesión</h3>` }
     console.log('No posts')
   }
-} /* 
-            <li class="list-group-item list-group-item-action list-group-item-dark">
-            <h5>${post.name}</h5>
-            <p>${post.description}</p>
-            </li> */
+} 

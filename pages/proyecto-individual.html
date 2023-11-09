@@ -22,7 +22,7 @@
   <section class="placeholder-glow  m-4">
     <h1 id="name" class="placeholder">PROYECTO Individual</h1>
     <div class="d-flex justify-content-between">
-      <p class="placeholder">Publicación: <span id="dateposted">17/10/2023</span></p>
+      <p class="placeholder">Publicación: <span id="dateposted">17/10/2023</span> | por: <span id="postautor">Autor</span> </p>
       <p>|</p>
       <p class="placeholder">Límite: <span id="datelimit">17/11/2023</span></p>
     </div>
@@ -41,21 +41,21 @@
     </div> -->
     
     <div class="d-flex justify-content-evenly  max-height-400">
-      <a class="placeholder col-10 d-flex justify-content-center align-items-center bg-white img-grande me-3">
-        <img id="imggrande" alt=""  class="h-100 w-100">
+      <a class="placeholder col-10 d-flex justify-content-center align-items-center bg-white me-3">
+        <img id="imggrande" alt=""  class="max-height-400">
       </a>
-      <div class="d-flex flex-column justify-content-between miniaturas">
-        <a class="placeholder d-flex justify-content-center align-items-center bg-white">
-          <img id="img1" alt=""  class=" w-100 max-height-90 img1">
+      <div class="d-flex flex-column justify-content-between">
+        <a id="aimg1" class="d-flex justify-content-center align-items-center bg-white pointer">
+          <img id="img1" alt=""  class="max-height-90 img1">
         </a>
-        <a class="d-flex justify-content-center align-items-center bg-white">
-          <img id="img2" alt=""  class=" w-100 max-height-90 img2">
+        <a id="aimg2" class="d-flex justify-content-center align-items-center bg-white pointer">
+          <img id="img2" alt=""  class="max-height-90 img2">
         </a>
-        <a class="d-flex justify-content-center align-items-center bg-white">
-          <img id="img3" alt=""  class=" w-100 max-height-90 img3">
+        <a id="aimg3" class="d-flex justify-content-center align-items-center bg-white pointer">
+          <img id="img3" alt=""  class="max-height-90 img3">
         </a>
-        <a class="d-flex justify-content-center align-items-center bg-white">
-          <img id="img4" alt=""  class=" w-100 max-height-90 img4">
+        <a id="aimg4" class="d-flex justify-content-center align-items-center bg-white pointer">
+          <img id="img4" alt=""  class="max-height-90 img4">
         </a>
         
       </div>
@@ -104,6 +104,8 @@
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="../app/post/loadPost.js" type="module"></script>
+  <!-- Cambiar Imagen -->
+  <script src="../assets/js/changeImg.js"></script>
 
 </body>
 

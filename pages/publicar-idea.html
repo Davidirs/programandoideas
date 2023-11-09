@@ -1,258 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="../assets/img/favicon.png"
-      type="image/x-icon"
-    />
-    <title>Publicar Idea</title>
-    <!-- add main -->
 
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <script type="module" src="../app/main.js"></script>
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <!-- Add Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-      crossorigin="anonymous"
-    />
-    <!-- toastify.js -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon" />
+  <title>Publicar Idea</title>
+  <!-- add main -->
 
-  <body>
-    <div id="header"></div>
-    <div class="d-flex justify-content-center align-items-center bg-img-proyect color-white">
-      <h1>PUBLICAR IDEA</h1>
-    </div>
-    <main class="row">
-      <aside class="bg-dark-blue col-md-3 p-4">
-        <div class="accordion bg-light" id="accordionPanelsStayOpenExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseOne"
-                aria-expanded="true"
-                aria-controls="panelsStayOpen-collapseOne"
-              >
-                Nombre de la idea
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseOne"
-              class="accordion-collapse collapse show"
-            >
-              <div class="accordion-body">
-                <p>
-                  Describe con una frase u oración tu idea, dejando claro el
-                  enfoque de la misma, esto puede cambiar.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseTwo"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseTwo"
-              >
-                Describe tu idea
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseTwo"
-              class="accordion-collapse collapse"
-            >
-              <div class="accordion-body">
-                <p>
-                  Describe tu idea y ayúdanos a entender a qué y quiénes va
-                  dirigido, resalta las problemáticas que van a ser
-                  solucionadas.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseThree"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseThree"
-              >
-                Tipo de proyecto
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseThree"
-              class="accordion-collapse collapse"
-            >
-              <div class="accordion-body">
-                <p>
-                  Indica el tipo de plataforma en el que deseas desarrollar tu
-                  proyecto.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseFour"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseFour"
-              >
-                Recurso humano
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseFour"
-              class="accordion-collapse collapse"
-            >
-              <div class="accordion-body">
-                <p>
-                  Indica de qué áreas de trabajo te hace falta para el
-                  desarrollo del proyecto.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseFive"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseFive"
-              >
-                Muestra recursos
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseFive"
-              class="accordion-collapse collapse"
-            >
-              <div class="accordion-body">
-                <p>
-                  Sube a la plataforma los recursos de tu proyecto que sean
-                  necesarios para dar a conocer tu idea. Sólo acepta archivos de
-                  imágenes.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseSix"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseSix"
-              >
-                Información para inversores
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseSix"
-              class="accordion-collapse collapse"
-            >
-              <div class="accordion-body">
-                <p>
-                  Indica de qué manera pueden ayudarte quienes deseen invertir
-                  en tu proyecto.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseSeven"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseSeven"
-              >
-                Monto mínimo de inversión
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseSeven"
-              class="accordion-collapse collapse"
-            >
-              <div class="accordion-body">
-                <p>
-                  Indica el monto mínimo que requieres por parte de los
-                  inversores para que puedas desarrollar tu proyecto.
-                </p>
-              </div>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <script type="module" src="../app/main.js"></script>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <!-- Add Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+  <!-- toastify.js -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+</head>
+
+<body>
+  <div id="header"></div>
+  <div class="d-flex justify-content-center align-items-center bg-img-proyect color-white">
+    <h1>PUBLICAR IDEA</h1>
+  </div>
+  <main class="row">
+    <aside class="bg-dark-blue col-md-3 p-4">
+      <div class="accordion bg-light" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne">
+              Nombre de la idea
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <p>
+                Describe con una frase u oración tu idea, dejando claro el
+                enfoque de la misma, esto puede cambiar.
+              </p>
             </div>
           </div>
         </div>
-      </aside>
-
-      <section class="bg-light-grey col-md-9 p-4 ">
-        <div>
-           <h1 class="text-center pb-2">Publicar Idea</h1>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTwo">
+              Describe tu idea
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>
+                Describe tu idea y ayúdanos a entender a qué y quiénes va
+                dirigido, resalta las problemáticas que van a ser
+                solucionadas.
+              </p>
+            </div>
+          </div>
         </div>
-       
-<div class="container d-flex justify-content-center">
-  <form class="col-md-8 ms-5 " id="post-form">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseThree">
+              Tipo de proyecto
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>
+                Indica el tipo de plataforma en el que deseas desarrollar tu
+                proyecto.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFour">
+              Recurso humano
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>
+                Indica de qué áreas de trabajo te hace falta para el
+                desarrollo del proyecto.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFive">
+              Muestra recursos
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>
+                Sube a la plataforma los recursos de tu proyecto que sean
+                necesarios para dar a conocer tu idea. Sólo acepta archivos de
+                imágenes.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseSix">
+              Información para inversores
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>
+                Indica de qué manera pueden ayudarte quienes deseen invertir
+                en tu proyecto.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseSeven">
+              Monto mínimo de inversión
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>
+                Indica el monto mínimo que requieres por parte de los
+                inversores para que puedas desarrollar tu proyecto.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="bg-light-grey col-md-9 p-4 ">
+      <div>
+        <h1 class="text-center pb-2">Publicar Idea</h1>
+      </div>
+
+      <div class="container d-flex justify-content-center">
+        <form class="col-md-8 ms-5 " id="post-form">
           <div class="container">
             <label class="mb-2">¿Qué nombre tiene tu idea?</label>
-            <input
-              type="text"
-              name="name"
-              id="post-name"
-              class="br-20 w-100 form-control"
-              placeholder="Nombre"
-            />
+            <input type="text" name="name" id="post-name" class="br-20 w-100 form-control" placeholder="Nombre" />
           </div>
 
           <div class="container">
             <label class="mb-2">Describe tu idea</label>
-            <textarea
-              type="text"
-              name="description"
-              id="post-description"
-              class="br-20 w-100 form-control"
-              placeholder="Descripción de la idea"
-            ></textarea>
+            <textarea type="text" name="description" id="post-description" class="br-20 w-100 form-control"
+              placeholder="Descripción de la idea"></textarea>
           </div>
 
           <div class="container">
             <label class="mb-2">Tipo de proyecto</label>
-            <select
-              name="select"
-              class="form-select form-select-md br-20 w-100"
-              id="post-type"
-            >
+            <select name="select" class="form-select form-select-md br-20 w-100" id="post-type">
               <option value="Selecciona una opción" selected disabled>
                 Selecciona una opción
               </option>
@@ -264,12 +182,8 @@
           <hr />
           <div class="container">
             <label class="mb-2">¿Qué necesitas de recurso humano?</label>
-            <textarea
-              type="text"
-              name="infodeveloper"
-              id="post-infodeveloper"
-              class="br-20 w-100 form-control"
-            ></textarea>
+            <textarea type="text" name="infodeveloper" id="post-infodeveloper"
+              class="br-20 w-100 form-control"></textarea>
           </div>
 
           <hr />
@@ -288,127 +202,83 @@
             <div class="mb-3">
               <input class="form-control" id="image-picker3" type="file" accept="image/*">
             </div>
-            
-            
-            
+
+
+
           </div>
 
-          
+
           <picture class="d-flex justify-content-evenly">
-            <img
-              src="../assets/img/idea.png"
-              alt=""
-              id="image-preview0"
-              class="img-preview"
-            />
-            <img
-              src="../assets/img/idea.png"
-              alt=""
-              id="image-preview1"
-              class="img-preview"
-            />
-            <img
-              src="../assets/img/idea.png"
-              alt=""
-              id="image-preview2"
-              class="img-preview"
-            />
-            <img
-              src="../assets/img/idea.png"
-              alt=""
-              id="image-preview3"
-              class="img-preview"
-            />
+            <img src="../assets/img/idea.png" alt="" id="image-preview0" class="img-preview" />
+            <img src="../assets/img/idea.png" alt="" id="image-preview1" class="img-preview" />
+            <img src="../assets/img/idea.png" alt="" id="image-preview2" class="img-preview" />
+            <img src="../assets/img/idea.png" alt="" id="image-preview3" class="img-preview" />
           </picture>
           <hr />
 
           <div class="container">
             <label>Información para inversores</label>
-            <textarea
-              type="text"
-              name="infoinvestor"
-              id="post-infoinvestor"
-              class="br-20 w-100 form-control"
-            ></textarea>
+            <textarea type="text" name="infoinvestor" id="post-infoinvestor"
+              class="br-20 w-100 form-control"></textarea>
           </div>
 
           <div class="container">
             <label>Monto mínimo de inversión</label>
-            <input
-              type="text"
-              name="minamount"
-              id="post-minamount"
-              class="br-20 w-100 form-control"
-            />
+            <input type="text" name="minamount" id="post-minamount" class="br-20 w-100 form-control" />
           </div>
 
           <div class="container">
             <label>Monto máximo de inversión</label>
-            <input
-              type="text"
-              name="maxamount"
-              id="post-maxamount"
-              class="br-20 w-100 form-control"
-            />
+            <input type="text" name="maxamount" id="post-maxamount" class="br-20 w-100 form-control" />
           </div>
 
           <hr />
           <div class="container text-center">
-            <button
-              type="submit"
-              id="btn-post"
-              href="#"
-              class="button br-20 btn-gradient"
-            >
+            <button type="submit" id="btn-post" href="#" class="button br-20 btn-gradient">
               Publicar Idea
             </button>
           </div>
         </form>
-</div>
-        
-      </section>
-    </main>
+      </div>
 
-    <div id="footer"></div>
-    <!-- Insertar bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Insertar FontAwesome -->
-    <script
-      src="https://kit.fontawesome.com/9fd95bcc65.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- post form -->
-    <script src="../app/formularios/postForm.js" type="module"></script>
-    <!-- Toastify -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/toastify-js"
-    ></script>
-    <style>
-      .img-preview {
-        width: 100px;
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <!-- Insertar bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Insertar FontAwesome -->
+  <script src="https://kit.fontawesome.com/9fd95bcc65.js" crossorigin="anonymous"></script>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- post form -->
+  <script src="../app/formularios/postForm.js" type="module"></script>
+  <!-- Toastify -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <style>
+    .img-preview {
+      width: 100px;
+    }
+  </style>
+  <script>
+    /* for (let i = 0; i < 4; i++) {
+    $("#image-picker" + i).change(function (event) {
+      readURL(this);
+    });
+
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          $("#image-preview" + i).attr("src", e.target.result);
+        };
+
+        reader.readAsDataURL(input.files[0]);
       }
-    </style>
-    <script>
-      /* for (let i = 0; i < 4; i++) {
-      $("#image-picker" + i).change(function (event) {
-        readURL(this);
-      });
+    }
+  } */
+  </script>
+</body>
 
-      function readURL(input) {
-        if (input.files && input.files[0]) {
-          var reader = new FileReader();
-
-          reader.onload = function (e) {
-            $("#image-preview" + i).attr("src", e.target.result);
-          };
-
-          reader.readAsDataURL(input.files[0]);
-        }
-      }
-    } */
-    </script>
-  </body>
 </html>

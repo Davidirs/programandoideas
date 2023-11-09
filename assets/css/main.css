@@ -25,6 +25,11 @@
     background: linear-gradient(45deg, #37517e 0%, #47B2E4 100%);
     color: white;
 }
+.btn-gradient.dark {
+    background: rgb(33, 37, 41);
+    background: linear-gradient(45deg, #212529 0%, #37517e 100%);
+    color: white;
+}
 
 .br-20 {
 
@@ -111,3 +116,31 @@ footer a {
     height: 90px;
 }
 
+
+.pointer {
+    cursor: pointer;
+}
+
+.img-miniatura {
+    margin-top: 2%;
+    width: 23%;
+    height: 100%;
+  }
+
+  .img-miniatura img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .miniaturas {
+    height: 20%;
+  }
+
+  .img-grande {
+    height: 80%;
+  }
+
+  .img-grande img {
+    max-width: 100%;
+    max-height: 100%;
+  }

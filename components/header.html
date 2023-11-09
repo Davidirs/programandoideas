@@ -33,12 +33,19 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Perfil</a></li>
                         <li>
+                        <li><a class="dropdown-item onlyAdmin hidden" href="../pages/dashboard.html">Tablero</a></li>
+                        <li>
                         <li><a class="dropdown-item" href="../pages/publicar-idea.html">Publicar Idea</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
                         <li><a class="dropdown-item" href="#" onclick="" id="logout">Cerrar sesión</a></li>
                     </ul>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link pointer" onclick="darkmode()">
+                        <i id="darkmode" class="fa fa-sun"></i>
+                    </a>
                 </li>
             </ul>
 
@@ -55,13 +62,13 @@
     } else if (currentPage.includes("proyectos.html")) {
         document.getElementById("proyectos").classList.add("active-tab");
     }
-    
+
     if (currentPage.includes("pages")) {
-        document.getElementById("logoHeader").setAttribute("src","../assets/img/logoblanco.png")
-        document.getElementById("logo").setAttribute("src","../assets/img/perfil.png")
-    }else{
-        document.getElementById("logoHeader").setAttribute("src","assets/img/logoblanco.png")
-        document.getElementById("logo").setAttribute("src","assets/img/perfil.png")
+        document.getElementById("logoHeader").setAttribute("src", "../assets/img/logoblanco.png")
+        document.getElementById("logo").setAttribute("src", "../assets/img/perfil.png")
+    } else {
+        document.getElementById("logoHeader").setAttribute("src", "assets/img/logoblanco.png")
+        document.getElementById("logo").setAttribute("src", "assets/img/perfil.png")
     }
 
     function index() {
@@ -87,12 +94,13 @@
     }
     function acceder() {
         if (currentPage.includes("pages")) {
-            
-        window.location.href = "../pages/sign-in-out.html";
+
+            window.location.href = "../pages/sign-in-out.html";
         } else {
-                    window.location.href = "pages/sign-in-out.html";
+            window.location.href = "pages/sign-in-out.html";
         }
     }
+    
 
 </script>
 
@@ -109,8 +117,6 @@
         position: sticky;
 
     }
-
-    .pointer {
-        cursor: pointer;
-    }
 </style>
+
+<script src="../assets/js/script.js"></script>
