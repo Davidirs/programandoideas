@@ -1,6 +1,6 @@
 const currentPage = window.location.href;
 
-if (currentPage.includes(":5500")) {
+if (currentPage.includes("localhost")) {
   /* agregar header */
 $(document).ready(function () {
     $('#header').load('/components/header.html');
