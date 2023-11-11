@@ -2,6 +2,8 @@ import { GithubAuthProvider, signInWithPopup } from "https://www.gstatic.com/fir
 import { auth } from "../firebase.js";
 import { showMessage } from "../showMessage.js";
 
+import { addUser } from '../users/addUser.js'
+
 const githubButton = document.querySelector("#githubLogin")
 if (githubButton) {
 
@@ -12,6 +14,17 @@ githubButton.addEventListener("click", async () => {
         const credentials = await signInWithPopup(auth, provider)
         console.log(credentials)
         showMessage("Bienvenido " + credentials.user.displayName, "sucess")
+        //agregar información de usuario a la base de datos
+        const user = {
+            /* "displayName": credentials.user.displayName,
+            "email": credentials.user.email,
+            "photoURL": credentials.user.photoURL, */
+            "uid": credentials.user.uid,
+        }
+        console.log(user)
+        await addUser(user)
+        
+        //redirigir al home
         window.location.href = "/";
     } catch (error) {
         console.log(error)

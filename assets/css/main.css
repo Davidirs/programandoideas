@@ -43,9 +43,15 @@
 .bg-light-grey {
     background-color: #f3f5fa;
 }
-
+.bg-dark-grey {
+    background-color: #c0c0c0;
+}
+/* 
 .bg-white {
     background-color: white;
+} */
+.bg-white.dark {
+    background-color: #f7f5f5;
 }
 
 .bg-img-proyect {
@@ -143,4 +149,7 @@ footer a {
   .img-grande img {
     max-width: 100%;
     max-height: 100%;
+  }
+  .card-img-top{
+    height: 150px;
   }

@@ -19,6 +19,7 @@ onAuthStateChanged(auth, async (user) => {
 
     loginCheck(user);
     if (user) {
+        console.log(user)
         if (user.photoURL !== null) {
             const logo = document.getElementById("logo");
             const usuario = document.getElementById("usuario");

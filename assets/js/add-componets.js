@@ -2,35 +2,34 @@ const currentPage = window.location.href;
 
 if (currentPage.includes("localhost")) {
   /* agregar header */
-$(document).ready(function () {
+  $(document).ready(function () {
     $('#header').load('/components/header.html');
   });
-  
-/* agregar footer */
-$(document).ready(function () {
+
+  /* agregar footer */
+  $(document).ready(function () {
     $('#footer').load('/components/footer.html');
   });
-}else if(currentPage.includes("pages")){
-    /* agregar header */
-$(document).ready(function () {
-  $('#header').load('../components/header.html');
-});
+} else if (currentPage.includes("pages")) {
+  /* agregar header */
+  $(document).ready(function () {
+    $('#header').load('../components/header.html');
+  });
 
-/* agregar footer */
-$(document).ready(function () {
-  $('#footer').load('../components/footer.html');
-});
-} else{
-   /* agregar header */
-$(document).ready(function () {
-  $('#header').load('components/header.html');
-});
+  /* agregar footer */
+  $(document).ready(function () {
+    $('#footer').load('../components/footer.html');
+  });
+} else {
+  /* agregar header */
+  $(document).ready(function () {
+    $('#header').load('components/header.html');
+  });
 
-/* agregar footer */
-$(document).ready(function () {
-  $('#footer').load('components/footer.html');
-});
+  /* agregar footer */
+  $(document).ready(function () {
+    $('#footer').load('components/footer.html');
+  });
 }
 
 
-  
