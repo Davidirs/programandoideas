@@ -16,9 +16,9 @@ githubButton.addEventListener("click", async () => {
         showMessage("Bienvenido " + credentials.user.displayName, "sucess")
         //agregar información de usuario a la base de datos
         const user = {
-            /* "displayName": credentials.user.displayName,
+            "displayName": credentials.user.displayName,
             "email": credentials.user.email,
-            "photoURL": credentials.user.photoURL, */
+            "photoURL": credentials.user.photoURL,
             "uid": credentials.user.uid,
         }
         console.log(user)

@@ -31,7 +31,7 @@
                         Usuario
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                        <li><a class="dropdown-item" href="../pages/perfil.html">Perfil</a></li>
                         <li>
                         <li><a class="dropdown-item onlyAdmin hidden" href="../pages/dashboard.html">Tablero</a></li>
                         <li>
@@ -113,6 +113,8 @@ function darkmode(){
     let btnGradient= document.querySelectorAll(".btn-gradient");
     let bgLight= document.querySelectorAll(".bg-light");
     let bgWhite= document.querySelectorAll(".bg-white");
+    let tables = document.querySelectorAll(".table");
+    let bgLightGrey= document.querySelectorAll(".bg-light-grey");
 
     btn.classList.toggle("fa-sun")
     btn.classList.toggle("fa-moon")
@@ -130,6 +132,14 @@ function darkmode(){
     });
     bgWhite.forEach(bg=>{
         bg.classList.toggle("dark")
+    });
+    tables.forEach(bg=>{/* 
+        bg.classList.toggle("bg-dark-blue") */
+        bg.classList.toggle("table-dark")
+    });
+    bgLightGrey.forEach(bg=>{/* 
+        bg.classList.toggle("bg-dark-blue") */
+        bg.classList.toggle("bg-dark-grey")
     });
     if(darkmodekey=== null || darkmodekey=== "false"){
         localStorage.setItem("darkmode","true")

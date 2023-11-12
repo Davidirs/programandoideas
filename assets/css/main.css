@@ -51,7 +51,7 @@
     background-color: white;
 } */
 .bg-white.dark {
-    background-color: #f7f5f5;
+    background-color: #c0c0c0 !important;
 }
 
 .bg-img-proyect {

@@ -1,4 +1,10 @@
-.active-tab {
+.active-tab, .active-tab a {
     font-weight: bold; 
     color: #11bfd8; 
   }
+.vh-90{
+  height: 90vh;
+}
+.mh-100vh{
+  min-height: 100vh;
+}
