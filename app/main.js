@@ -5,7 +5,7 @@ import { auth, db } from './firebase.js'
 import { loginCheck } from './login/logginCheck.js'
 import { logout } from './login/logout.js'
 import { setupPost } from './post/postList.js'
-import  './post/loadPost.js'
+import './post/loadPost.js'
 import './formularios/signupForm.js';
 import './formularios/signinForm.js'
 import './login/googleLogin.js'
@@ -13,6 +13,7 @@ import './login/facebookLogin.js'
 import './login/githubLogin.js'
 import '../assets/js/add-componets.js'
 import { loadPost } from "./post/loadPost.js";
+import { loadProfile } from "./users/loadProfile.js";
 
 
 onAuthStateChanged(auth, async (user) => {
@@ -29,6 +30,9 @@ onAuthStateChanged(auth, async (user) => {
         } else {
             usuario.textContent = user.email;
         }
+        const perfil = document.getElementById("perfil")
+        var url = '/pages/perfil.html?id=' + user.uid;
+        perfil.setAttribute("href", url)
         /* creo la funcion cerrar sesion */
         await logout();
 
@@ -44,6 +48,11 @@ onAuthStateChanged(auth, async (user) => {
             console.log("pagina proyecto individual")
             //const querySnapshot = await getDocs(collection(db, 'posts'));
             loadPost();
+        }
+        if (currentPage.includes("perfil.html")) {
+            console.log("Pagina perfil de usuario")
+            //const querySnapshot = await getDocs(collection(db, 'posts'));
+            loadProfile();
         }
 
     } else {

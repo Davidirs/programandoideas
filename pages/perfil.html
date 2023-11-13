@@ -21,90 +21,89 @@
 
 
     <div id="header"></div>
-
+<!-- 
     <div class="d-flex justify-content-center align-items-center bg-img-proyect color-white">
         <h1>Perfil de usuario</h1>
-    </div>
+    </div> -->
 
-    <div class="bg-light-grey p-4  placeholder0-glow ">
+    <div class="bg-light-grey p-4  placeholder-glow ">
 
 
         <section class="bg-dark-blue br-20 p-4 m-4">
 
             <div class="d-flex bg-white br-20 m-4 p-4">
                 <article class="col-8 d-flex flex-column justify-content-evenly">
-                    <div class="d-flex placeholder0">
+                    <div class="d-flex placeholder">
                         <h3 class="col-6">Nombre para mostrar:</h3>
                         <h2 class="user-name no-hidden">David Isacc Reyes</h2>
                         <input type="text" id="user-name" class="br-20 form-control hidden" placeholder="user-name" />
                     </div>
-                    <div class="d-flex placeholder0">
+                    <div class="d-flex placeholder">
                         <h3 class="col-6">Estado:</h3>
                         <h2 class="user-status">Activo</h2>
                     </div>
-                    <div class="d-flex placeholder0">
+                    <div class="d-flex placeholder">
                         <h3 class="col-6">Correo:</h3>
                         <h2 class="user-email">reyisacc@gmail.com</h2>
                     </div>
-                    <div class="d-flex placeholder0">
+                    <div class="d-flex placeholder">
                         <h3 class="col-6">Nacionalidad:</h3>
                         <h2 class="user-country no-hidden">Venezolana</h2>
                         <input type="text" id="user-country" class="br-20 form-control hidden" placeholder="user-country" />
                     </div>
                     <div class="">
-                        <a  id="btnEdit" class="placeholder0 button br-20 btn-gradient pointer" >Editar perfil</a>
+                        <a  id="btnEdit" class="placeholder button br-20 btn-gradient pointer" >Editar perfil</a>
                     </div>
 
                 </article>
                 <article class="col-4 d-flex flex-column justify-content-center align-items-center">
                     <img src="../assets/img/perfil.png" alt="" id="image-preview0" width="250"
-                        class="placeholder0 img-preview" />
+                        class="placeholder img-preview" />
 
-                    <h3 class="placeholder0">Foto/Avatar</h3>
-                    <h3 class="placeholder0 no-hidden">☆☆☆☆☆</h3>
+                    <h3 class="placeholder">Foto/Avatar</h3>
+                    <h3 class="placeholder rating no-hidden">☆☆☆☆☆</h3>
 
                     <input class="form-control hidden" id="image-picker0" type="file" accept="image/*">
                 </article>
 
             </div>
             <article class="bg-white m-4 p-4 br-20">
-                <div class="placeholder0 d-flex">
+                <div class="placeholder d-flex">
                     <h3 class="col-4">Descripción:</h3>
-                    <p class="no-hidden">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi doloribus
+                    <p class="no-hidden user-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi doloribus
                         asperiores beatae! Et
                         ullam mollitia, explicabo perspiciatis consectetur eveniet dicta suscipit quo aut voluptatem
-                        sapiente ipsum architecto veniam libero reprehenderit laudantium laborum minus ut voluptatum
-                        quos ea, fugit sit tempore corrupti! Exercitationem, consequuntur nulla voluptatibus alias
-                        suscipit saepe mollitia animi?</p>
+                        sapiente ipsum architecto veniam liber.</p>
                     <textarea type="text" name="description" id="user-description"
                         class="br-20 form-control hidden"></textarea>
                 </div>
-                <div class="placeholder0 d-flex">
+                
+                <div class="placeholder d-flex  align-items-center">
                     <h3 class="col-4">Redes sociales:</h3>
                     <ul class="w-100 d-flex justify-content-evenly align-items-center list-social">
                         <li class="d-flex w-100 justify-content-center align-items-center">
                             <a href="" class="user-linkedin icon-social"><i class="fa-brands fa-linkedin"></i></a>
                             <input type="text" id="user-linkedin" class="br-20 form-control hidden"
-                                placeholder="user-linkedin" />
+                                placeholder="http://www.linkedin.com/..." />
                         </li>
                         <li class="d-flex w-100 justify-content-center align-items-center">
                             <a href="" class="user-github icon-social"><i class="fa-brands fa-github"></i></a>
-                            <input type="text" id="user-github" class="br-20 form-control hidden" placeholder="user-github" />
+                            <input type="text" id="user-github" class="br-20 form-control hidden" placeholder="http://www.github.com/..." />
                         </li>
                         <li class="d-flex w-100 justify-content-center align-items-center">
                             <a href="" class="user-facebook icon-social"><i class="fa-brands fa-facebook"></i></a>
                             <input type="text" id="user-facebook" class="br-20 form-control hidden"
-                                placeholder="user-facebook" />
+                                placeholder="http://www.facebook.com/..." />
                         </li>
                         <li class="d-flex w-100 justify-content-center align-items-center">
                             <a href="" class="user-instagram icon-social"><i class="fa-brands fa-instagram"></i></a>
                             <input type="text" id="user-instagram" class="br-20 form-control hidden"
-                                placeholder="user-instagram" />
+                                placeholder="http://www.instagram.com/..." />
                         </li>
                         <li class="d-flex w-100 justify-content-center align-items-center">
                             <a href="" class="user-youtube icon-social"><i class="fa-brands fa-youtube"></i></a>
                             <input type="text" id="user-youtube" class="br-20 form-control hidden"
-                                placeholder="user-youtube" />
+                                placeholder="http://www.youtube.com/..." />
                         </li>
                     </ul>
                 </div>
@@ -113,7 +112,7 @@
 
         <section class="bg-dark-blue p-4 br-20 m-4">
             <article class="m-4 bg-white">
-                <h3 class="placeholder0">Proyectos publicados</h3>
+                <h3 class="placeholder">Proyectos publicados</h3>
                 <table class="table table-light">
                     <thead>
                         <tr>
@@ -154,7 +153,7 @@
                 </table>
             </article>
             <article class="m-4 bg-white">
-                <h3 class="placeholder0">Proyectos como desarrollador</h3>
+                <h3 class="placeholder">Proyectos como desarrollador</h3>
                 <table class="table table-light">
                     <thead>
                         <tr>
@@ -190,7 +189,7 @@
                 </table>
             </article>
             <article class="m-4 bg-white">
-                <h3 class="placeholder0">Proyectos como inversor</h3>
+                <h3 class="placeholder">Proyectos como inversor</h3>
                 <table class="table table-light">
                     <thead>
                         <tr>

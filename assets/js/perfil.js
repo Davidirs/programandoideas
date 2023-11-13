@@ -17,5 +17,7 @@ btnEdit.addEventListener("click", ()=>{
             item.classList.toggle("hidden")
             item.classList.toggle("no-hidden")
         })
+        const listSocial = document.querySelector(".list-social");
+        listSocial.classList.toggle("flex-column")
 
 })

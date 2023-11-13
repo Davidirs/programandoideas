@@ -153,3 +153,8 @@ footer a {
   .card-img-top{
     height: 150px;
   }
+
+  .icon-social{
+    font-size: xx-large;
+    margin: 10px;
+  }
