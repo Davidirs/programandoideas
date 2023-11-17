@@ -65,7 +65,7 @@ export const loadPost = async () => {
     }
   }
   catch (error) {
-    window.location.href = "../pages/404.html";
+    goto("p404");
   }
 
 

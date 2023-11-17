@@ -2,21 +2,20 @@
 
 
 //pages
-const pages = {
+const pages = {/* 
     //components
     "footer": "/components/footer.html",
-    "header": "/components/header.html",
+    "header": "/components/header.html", */
     //pages
-    //index
     "home": "/",
-    "p404": "/components/404.html",
-    "conocenos": "/components/conocenos.html",
-    "dashboard": "/components/dashboard.html",
-    "perfil": "/components/perfil.html",
-    "individual": "/components/proyecto-individual.html",
-    "proyectos": "/components/proyectos.html",
-    "publicar": "/components/publicar-idea.html",
-    "singin": "/components/sing-in-out.html",
+    "p404": "/pages/404.html", //hasta aqui listo
+    "conocenos": "/pages/conocenos.html",
+    "dashboard": "/pages/dashboard.html",
+    "perfil": "/pages/perfil.html",
+    "individual": "/pages/proyecto-individual.html",
+    "proyectos": "/pages/proyectos.html",
+    "publicar": "/pages/publicar-idea.html",
+    "singin": "/pages/sign-in-out.html",
 }
 
 
@@ -51,7 +50,7 @@ const goto = (route) => {
         case "publicar":
             window.location.href = nameProyect+pages.publicar;
             break;
-        case "singin":
+        case "signin":
             window.location.href = nameProyect+pages.singin;
             break;
 

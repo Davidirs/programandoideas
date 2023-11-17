@@ -34,10 +34,10 @@ onAuthStateChanged(auth, async (user) => {
             })
         } else {
             console.log("No es admin, no debes ver esta pagina")
-            window.location.href = "./404.html";  
+            goto("p404");
         }
     }else{
-        console.log("No estás logueado, por favor inicia sesion")
-        window.location.href = "./sign-in-out.html";  
+        console.log("No estás logueado, por favor inicia sesion");
+        goto("signin");
     }
 })

@@ -33,7 +33,7 @@ if (signupForm) {
                 await addUser(user)
 
                 //redirigir al home
-                window.location.href = "/";
+                goto("home");
             } catch (error) {
                 switch (error.code) {
                     case "auth/weak-password":

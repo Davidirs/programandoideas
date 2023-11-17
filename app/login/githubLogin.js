@@ -25,7 +25,7 @@ githubButton.addEventListener("click", async () => {
         await addUser(user)
         
         //redirigir al home
-        window.location.href = "/";
+        goto("home");
     } catch (error) {
         console.log(error)
     }
