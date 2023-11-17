@@ -24,10 +24,10 @@ if (signupForm) {
                 showMessage("Bienvenido " + userCredential.user.email, "sucess")
                 //agregar información de usuario a la base de datos
                 const user = {
-                    "displayName": credential.user.displayName,
-                    "email": credential.user.email,
-                    "photoURL": credential.user.photoURL,
-                    "uid": credential.user.uid,
+                    "displayName": userCredential.user.displayName,
+                    "email": userCredential.user.email,
+                    "photoURL": userCredential.user.photoURL,
+                    "uid": userCredential.user.uid,
                 }
                 console.log(user)
                 await addUser(user)
