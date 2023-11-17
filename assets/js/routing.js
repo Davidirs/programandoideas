@@ -3,13 +3,13 @@
 
 //pages
 const pages = {
-    //index
-    "home": "/",
     //components
     "footer": "/components/footer.html",
     "header": "/components/header.html",
     //pages
-    "404": "/components/404.html",
+    //index
+    "home": "/",
+    "p404": "/components/404.html",
     "conocenos": "/components/conocenos.html",
     "dashboard": "/components/dashboard.html",
     "perfil": "/components/perfil.html",
@@ -28,7 +28,31 @@ const goto = (route) => {
     }
     switch (route) {
         case "home":
-            window.location.href = pages.home;
+            window.location.href = nameProyect+pages.home;
+            break;
+        case "p404":
+            window.location.href = nameProyect+pages.p404;
+            break;
+        case "conocenos":
+            window.location.href = nameProyect+pages.conocenos;
+            break;
+        case "dashboard":
+            window.location.href = nameProyect+pages.dashboard;
+            break;
+        case "perfil":
+            window.location.href = nameProyect+pages.perfil;
+            break;
+        case "individual":
+            window.location.href = nameProyect+pages.individual;
+            break;
+        case "proyectos":
+            window.location.href = nameProyect+pages.proyectos;
+            break;
+        case "publicar":
+            window.location.href = nameProyect+pages.publicar;
+            break;
+        case "singin":
+            window.location.href = nameProyect+pages.singin;
             break;
 
         default:
