@@ -15,6 +15,12 @@ import '../assets/js/add-componets.js'
 import { loadPost } from "./post/loadPost.js";
 import { loadProfile } from "./users/loadProfile.js";
 
+//saber si estoy en github
+let nameProyect = "";
+const isGitHub = window.location.href.includes("github");
+if (isGitHub) {
+    nameProyect = "/programandoideas";
+}
 
 onAuthStateChanged(auth, async (user) => {
 
@@ -31,7 +37,7 @@ onAuthStateChanged(auth, async (user) => {
             usuario.textContent = user.email;
         }
         const perfil = document.getElementById("perfil")
-        var url = '/pages/perfil.html?id=' + user.uid;
+        var url = nameProyect + '/pages/perfil.html?id=' + user.uid;
         perfil.setAttribute("href", url)
         /* creo la funcion cerrar sesion */
         await logout();

@@ -2,14 +2,10 @@
 
 
 //pages
-const pages = {/* 
-    //components
-    "footer": "/components/footer.html",
-    "header": "/components/header.html", */
-    //pages
+const pages = {
     "home": "/",
-    "p404": "/pages/404.html", //hasta aqui listo
-    "conocenos": "/pages/conocenos.html",
+    "p404": "/pages/404.html", 
+    "conocenos": "/pages/conocenos.html",//hasta aqui listo
     "dashboard": "/pages/dashboard.html",
     "perfil": "/pages/perfil.html",
     "individual": "/pages/proyecto-individual.html",

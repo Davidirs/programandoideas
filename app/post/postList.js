@@ -2,16 +2,21 @@ import { imageList } from '../storage/imageList.js';
 const postList = document.querySelector(".posts");
 
 export const setupPost = (data) => {
-  
+
   if (data.length) {
     let html = "";
 
     data.forEach(doc => {
       const post = doc.data()
       var id = doc.id;
-
+      //saber si estoy en github
+      let nameProyect = "";
+      const isGitHub = window.location.href.includes("github");
+      if (isGitHub) {
+        nameProyect = "/programandoideas";
+      }
       // Construir la URL con los parámetros
-      var url = '/pages/proyecto-individual.html?id=' + id;
+      var url = nameProyect + '/pages/proyecto-individual.html?id=' + id;
 
       const li = `
             <div class="bg-dark-blue br-20 p-3 m-4">
@@ -57,11 +62,12 @@ export const setupPost = (data) => {
             `
       html += li;
 
-      
+
 
     });
-    if (postList) { postList.innerHTML = html 
-    
+    if (postList) {
+      postList.innerHTML = html
+
     }
   } else {
 

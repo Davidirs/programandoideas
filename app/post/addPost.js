@@ -26,7 +26,7 @@ export const addPost = async (post) => {
         
         
         showMessage("Publicación agregada","success");
-        window.location.href = "../pages/proyectos.html";   
+        goto('proyectos');
                     
     } catch (e) {
         showMessage("Error al intentar agregar " +e)
