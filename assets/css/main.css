@@ -110,6 +110,9 @@ footer a {
     transition: 1s;
 }
 
+.hiddenI {
+    display: none !important;
+}
 .hidden {
     display: none;
 }

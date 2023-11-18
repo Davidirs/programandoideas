@@ -1,3 +1,5 @@
+import { saveProfile } from "../../app/users/saveProfile.js"
+
 const btnEdit = document.querySelector("#btnEdit")
 console.log(btnEdit)
 btnEdit.addEventListener("click", ()=>{
@@ -5,6 +7,10 @@ btnEdit.addEventListener("click", ()=>{
         btnEdit.textContent = "Guardar perfil"
 
     }else{
+        console.log("guardando...")
+
+        saveProfile();
+
         btnEdit.textContent = "Editar perfil"
     }
         const hidden = document.querySelectorAll(".hidden")
