@@ -24,7 +24,7 @@ if (signupForm) {
                 showMessage("Bienvenido " + userCredential.user.email, "sucess")
                 //agregar información de usuario a la base de datos
                 const user = {
-                    "displayName": userCredential.user.displayName,
+                    "displayName": userCredential.user.email,
                     "email": userCredential.user.email,
                     "photoURL": userCredential.user.photoURL,
                     "uid": userCredential.user.uid,

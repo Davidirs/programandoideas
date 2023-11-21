@@ -26,7 +26,6 @@ onAuthStateChanged(auth, async (user) => {
 
     loginCheck(user);
     if (user) {
-        console.log(user)
         if (user.photoURL !== null) {
             const logo = document.getElementById("logo");
             const usuario = document.getElementById("usuario");
@@ -61,8 +60,23 @@ onAuthStateChanged(auth, async (user) => {
             loadProfile();
         }
 
+        const btnEmpecemos = document.getElementById("empecemos");
+        if (btnEmpecemos) {
+            btnEmpecemos.textContent = "Publicar Idea";
+            btnEmpecemos.setAttribute("onclick", "goto('publicar')")
+        }
+
+
+
+
+
     } else {
         setupPost([]);
         console.log("NO está logueado")
+
+        if (currentPage.includes("perfil.html")) {
+            loadProfile();
+             document.querySelector("#btnEdit").remove();
+        }
     }
 })

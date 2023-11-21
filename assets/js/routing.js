@@ -49,6 +49,7 @@ const goto = (route) => {
         case "signin":
             window.location.href = nameProyect+pages.singin;
             break;
+        
 
         default:
             break;

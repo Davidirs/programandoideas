@@ -42,8 +42,12 @@
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="login-password" placeholder="*********"
-                                required>
+                           <div class="d-flex justify-content-between align-items-center">
+
+                               <input type="password" class="form-control password-input" id="login-password" placeholder="*********"
+                                    required>
+                                    <a class="pointer "><i class="fa-solid password-eye fa-eye-slash"></i></a>
+                           </div> 
                         </div>
                        <!--  <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="rememberMe">
@@ -84,13 +88,20 @@
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="signup-password" placeholder="*********"
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <input type="password" class="form-control password-input" id="signup-password" placeholder="*********"
                                 required>
+                                <a class="pointer "><i class="fa-solid password-eye fa-eye-slash fa-eye"></i></a>
+                            </div>
                         </div>
 
                         <div class="mb-3">
                             <label for="password" class="form-label">Confirmar contraseña</label>
-                            <input type="password" class="form-control" id="signup-password2" placeholder="*********" required>
+                            <div class="d-flex justify-content-between align-items-center">
+                            <input type="password" class="form-control password-input" id="signup-password2" placeholder="*********" required>
+                            <a class="pointer "><i class="fa-solid password-eye fa-eye-slash fa-eye"></i></a>
+                            </div>
                         </div>
 
                         <button type="submit" class="button br-20 btn-gradient col-12">Registrarse</button>
@@ -103,23 +114,9 @@
             </div>
         </section>
     </main>
-    <script>
-        const containerSignup = document.getElementById("container-signup");
-        const containerLogin = document.getElementById("container-login");
-        const btnMenus = document.querySelectorAll(".btn-menu");
-        const change = document.querySelectorAll(".change");
-        console.log(change)
-        btnMenus.forEach((btn) => {
-            btn.addEventListener("click", () => {
-                btnMenus.forEach(btn => btn.classList.toggle("btn-gradient"));
-                /* btn.classList.add("btn-gradient") */
-                change.forEach(change => change.classList.toggle("hidden"));
-            })
-        })
 
-
-    </script>
-
+    <!-- routing -->
+    <script src="../assets/js/sign-in-out.js"></script>
     <!-- routing -->
     <script src="../assets/js/routing.js"></script>
     <!-- Add Bootstrap JavaScript -->

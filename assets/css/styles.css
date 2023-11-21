@@ -8,3 +8,9 @@
 .mh-100vh{
   min-height: 100vh;
 }
+#login-form a, #signup-form a{
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
