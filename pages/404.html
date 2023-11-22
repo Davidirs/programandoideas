@@ -19,7 +19,38 @@
 
 
 
-  <div id="header"></div>
+  <div id="header">
+    <nav class="navbar navbar-expand-lg fs-5 bg-dark-blue" data-bs-theme="dark">
+      <div class="container d-flex">
+        <img id="logoHeader" alt="logo" width="120" src="../assets/img/logoblanco.png">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link pointer" aria-current="page" onclick="index()" id="inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pointer" onclick="conocenos()" id="conocenos">Conócenos</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link pointer" id="proyectos" onclick="proyectos()">
+                Proyectos
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link pointer" onclick="darkmode()">
+                <i id="darkmode" class="fa fa-sun" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </div>
 
   <div class="d-flex justify-content-center align-items-center bg-img-proyect color-white">
     <h1>Ups! lo sentimos...</h1>

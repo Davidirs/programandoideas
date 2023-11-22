@@ -14,6 +14,7 @@ import './login/githubLogin.js'
 import '../assets/js/add-componets.js'
 import { loadPost } from "./post/loadPost.js";
 import { loadProfile } from "./users/loadProfile.js";
+import '../assets/js/routing.js'
 
 //saber si estoy en github
 let nameProyect = "";
@@ -25,6 +26,8 @@ if (isGitHub) {
 onAuthStateChanged(auth, async (user) => {
 
     loginCheck(user);
+    
+    const btnEmpecemos = document.getElementById("empecemos");
     if (user) {
         if (user.photoURL !== null) {
             const logo = document.getElementById("logo");
@@ -58,9 +61,14 @@ onAuthStateChanged(auth, async (user) => {
             console.log("Pagina perfil de usuario")
             //const querySnapshot = await getDocs(collection(db, 'posts'));
             loadProfile();
+           if(auth.currentUser.email=="admin@programandoidea.com"){
+            console.log("Eres administrador y puedes editar todos los perfiles")
+           } else{
+            console.log("No eres administrador para editar los perfiles")
+            document.querySelector("#btnEdit").remove();
+           }
         }
 
-        const btnEmpecemos = document.getElementById("empecemos");
         if (btnEmpecemos) {
             btnEmpecemos.textContent = "Publicar Idea";
             btnEmpecemos.setAttribute("onclick", "goto('publicar')")
@@ -77,6 +85,13 @@ onAuthStateChanged(auth, async (user) => {
         if (currentPage.includes("perfil.html")) {
             loadProfile();
              document.querySelector("#btnEdit").remove();
+        }
+        if (currentPage.includes("idea.html")) {
+            goto("home");
+        }
+        if (btnEmpecemos) {
+            btnEmpecemos.textContent = "Empecemos";
+            btnEmpecemos.setAttribute("onclick", "goto('signin')")
         }
     }
 })

@@ -55,3 +55,14 @@ const goto = (route) => {
             break;
     }
 }
+
+const gotoPerfil = (id) => {
+    let nameProyect = "";
+    const isGitHub = window.location.href.includes("github");
+    if (isGitHub) {
+        nameProyect = "/programandoideas";
+    }
+    
+    var url = nameProyect + '/pages/perfil.html?id=' + id;
+    window.location.href = url;
+}

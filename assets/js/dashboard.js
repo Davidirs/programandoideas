@@ -8,7 +8,7 @@ for (let i = 0; i < menuItems.length; i++) {
 
     menuItems[i].addEventListener('click', () => {
         console.log(i)
-        for (let j = 0; j < secciones.length; j++) {
+        for (let j = 0; j < menuItems.length; j++) {
             secciones[j].classList.add("hidden")
             menuItems[j].classList.remove("active-tab")
             if (i==j) {

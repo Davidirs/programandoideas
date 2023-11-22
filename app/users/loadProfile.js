@@ -16,11 +16,11 @@ const imagePreview = document.querySelector("#image-preview0");
 const rating = document.querySelector(".rating");
 const description = document.querySelector(".user-description");
 const descriptionInput = document.querySelector("#user-description");
-const liLinkedin = document.querySelector(".li-linkedin");
+/* const liLinkedin = document.querySelector(".li-linkedin");
 const liGithub = document.querySelector(".li-github");
 const liFacebook = document.querySelector(".li-facebook");
 const liInstagram = document.querySelector(".li-instagram");
-const liYoutube = document.querySelector(".li-youtube");
+const liYoutube = document.querySelector(".li-youtube"); */
 const userLinkedin = document.querySelector(".user-linkedin");
 const userGithub = document.querySelector(".user-github");
 const userFacebook = document.querySelector(".user-facebook");
@@ -57,7 +57,7 @@ export const loadProfile = async () => {
         userFacebookInput.value = user.facebook;
         userInstagramInput.value = user.instagram;
         userYoutubeInput.value = user.youtube;
-        console.log(liLinkedin)
+        
         if (user.linkedin == "") {
             //liLinkedin.classList.add("hiddenI")
             userLinkedin.removeAttribute("href")

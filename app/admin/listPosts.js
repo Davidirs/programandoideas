@@ -10,10 +10,11 @@ const postsNumFailed = document.querySelector(".postsNumFailed");
 
 export const listPosts = (data) => {
   if (data.length) {
-    postsNumShowing.textContent = data.length;
-    postsNumFinished.textContent = data.length;
-    postsNumCanceled.textContent = data.length;
-    postsNumFailed.textContent = data.length;
+    let showing = 0;
+    let finished = 0;
+    let canceled = 0;
+    let failed = 0;
+
     let html = "";
     let i = 0;
 
@@ -37,14 +38,35 @@ export const listPosts = (data) => {
             `
       html += tr;
 
+      //contador de usuarios
+      switch (post.status) {
+        case "Completado":
+          finished++
+          break;
+        case "Cancelado":
+          canceled++
+          break;
+        case "Fallido":
+          failed++
+          break;
 
+        default:
+          showing++
+          break;
+      }
 
-    });
-    console.log(postList)
+    })
     if (postList) {
       postList.innerHTML = html
 
     }
+
+
+    postsNumShowing.textContent = showing;
+    postsNumFinished.textContent = finished;
+    postsNumCanceled.textContent = canceled;
+    postsNumFailed.textContent = failed;
+
   } else {
     console.log('No hay usuarios')
   }

@@ -1,6 +1,8 @@
 
 import { auth } from "../firebase.js";
 import { showMessage } from "../showMessage.js";
+import { blockUser, editUser } from "./acciones.js";
+
 
 const userList = document.querySelector(".users");
 const usersNum = document.querySelector(".usersNum");
@@ -10,18 +12,19 @@ const usersNumPending = document.querySelector(".usersNumPending");
 const usersNumBlocked = document.querySelector(".usersNumBlocked");
 
 export const listUsers = (data) => {
+
+
   if (data.length) {
     usersNum.textContent = data.length;
-    usersNumActive.textContent = data.length;
-    usersNumPending.textContent = data.length;
-    usersNumBlocked.textContent = data.length;
     lastDateSesion.textContent = new Date(Date.now()).toLocaleString();
     let html = "";
 
-    let i = 0;
-    data.forEach(doc => {
-      i++;
-      const user = doc.data();
+    let active = 0;
+    let pending = 0;
+    let blocked = 0;
+
+    for (let i = 0; i < data.length; i++) {
+      const user = data[i].data();
       const tr = `
       <tr> 
         <th scope="row">${i}</th>
@@ -29,35 +32,54 @@ export const listUsers = (data) => {
           <td>${user.email}</td>
           <td>${user.status}</td>
           <td>
-          <a class="m-1 pointer"><i class="fa-solid fa-user-pen"></i></a>
-          <a class="m-1 pointer"><i class="fa-solid fa-user-lock"></i></a>
-          <a class="m-1 pointer"><i class="fa-solid fa-trash"></i></a>
+          <a class="m-1 pointer editar"><i class="fa-solid fa-user-pen"></i></a>
+          <a class="m-1 pointer bloquear"><i class="fa-solid fa-user-lock"></i></a>
+          <a class="m-1 pointer eliminar"><i class="fa-solid fa-trash"></i></a>
           </td>
       </tr>
             `
       html += tr;
+      //contador de usuarios
+      switch (user.status) {
+        case "Pendiente":
+          pending++
+          break;
+        case "Bloqueado":
+          blocked++
+          break;
+
+        default:
+          active++
+          break;
+      }
+
+    }
 
 
-
-    });
+    usersNumActive.textContent = active;
+    usersNumPending.textContent = pending;
+    usersNumBlocked.textContent = blocked;
     if (userList) {
       userList.innerHTML = html
+
+    }
+    let bloquear = document.querySelectorAll(".bloquear")
+    let editar = document.querySelectorAll(".editar")
+    let eliminar = document.querySelectorAll(".eliminar")
+
+    for (let i = 0; i < bloquear.length; i++) {
+      bloquear[i].addEventListener("click", () => {
+        blockUser(data[i].data().uid)
+      });
+      editar[i].addEventListener("click", () => {
+        editUser(data[i].data().uid)
+      });
 
     }
   } else {
     console.log('No hay usuarios')
   }
-  /*  auth.listUsers().then((result) => {
-     result.users.forEach((user) => {
-       // Accede a la información del usuario
-       const uid = user.uid;
-       const email = user.email;
-       // ...
-       console.log(uid , email)
-     });
-   }).catch((error) => {
-     // Maneja el error si no se pueden obtener los usuarios
-   }); */
+
 
 
 }
