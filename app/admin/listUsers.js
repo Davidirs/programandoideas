@@ -1,7 +1,7 @@
 
 import { auth } from "../firebase.js";
 import { showMessage } from "../showMessage.js";
-import { blockUser, editUser } from "./acciones.js";
+import { blockUser, editUser, activeUser } from "./acciones.js";
 
 
 const userList = document.querySelector(".users");
@@ -33,6 +33,7 @@ export const listUsers = (data) => {
           <td>${user.status}</td>
           <td>
           <a class="m-1 pointer editar"><i class="fa-solid fa-user-pen"></i></a>
+          <a class="m-1 pointer activar"><i class="fa-solid fa-user-check"></i></a>
           <a class="m-1 pointer bloquear"><i class="fa-solid fa-user-lock"></i></a>
           <a class="m-1 pointer eliminar"><i class="fa-solid fa-trash"></i></a>
           </td>
@@ -63,18 +64,22 @@ export const listUsers = (data) => {
       userList.innerHTML = html
 
     }
-    let bloquear = document.querySelectorAll(".bloquear")
     let editar = document.querySelectorAll(".editar")
+    let activar = document.querySelectorAll(".activar")
+    let bloquear = document.querySelectorAll(".bloquear")
     let eliminar = document.querySelectorAll(".eliminar")
 
     for (let i = 0; i < bloquear.length; i++) {
-      bloquear[i].addEventListener("click", () => {
-        blockUser(data[i].data().uid)
-      });
+
       editar[i].addEventListener("click", () => {
         editUser(data[i].data().uid)
       });
-
+      activar[i].addEventListener("click", () => {
+        activeUser(data[i].data().uid)
+      });
+      bloquear[i].addEventListener("click", () => {
+        blockUser(data[i].data().uid)
+      });
     }
   } else {
     console.log('No hay usuarios')

@@ -26,7 +26,7 @@ if (isGitHub) {
 onAuthStateChanged(auth, async (user) => {
 
     loginCheck(user);
-    
+
     const btnEmpecemos = document.getElementById("empecemos");
     if (user) {
         if (user.photoURL !== null) {
@@ -57,16 +57,26 @@ onAuthStateChanged(auth, async (user) => {
             //const querySnapshot = await getDocs(collection(db, 'posts'));
             loadPost();
         }
+        if (currentPage.includes("sign-in-out.html")) {
+            console.log("pagina Inicio de sesion")
+            //const querySnapshot = await getDocs(collection(db, 'posts'));
+            goto("home")
+        }
+        
         if (currentPage.includes("perfil.html")) {
             console.log("Pagina perfil de usuario")
-            //const querySnapshot = await getDocs(collection(db, 'posts'));
+            var urlParams = new URLSearchParams(window.location.search);
+            // Obtener el valor de un parámetro específico
+            var id = urlParams.get('id');
             loadProfile();
-           if(auth.currentUser.email=="admin@programandoidea.com"){
-            console.log("Eres administrador y puedes editar todos los perfiles")
-           } else{
-            console.log("No eres administrador para editar los perfiles")
-            document.querySelector("#btnEdit").remove();
-           }
+            if (auth.currentUser.email == "admin@programandoidea.com") {
+                console.log("Eres administrador y puedes editar todos los perfiles")
+            } else if (auth.currentUser.uid == id) {
+                console.log("Eres el usuario: " + id + " Entonces puedes editar tu perfil")
+            } else {
+                console.log("No eres administrador para editar los perfiles")
+                document.querySelector("#btnEdit").remove();
+            }
         }
 
         if (btnEmpecemos) {
@@ -84,10 +94,15 @@ onAuthStateChanged(auth, async (user) => {
 
         if (currentPage.includes("perfil.html")) {
             loadProfile();
-             document.querySelector("#btnEdit").remove();
+            document.querySelector("#btnEdit").remove();
         }
         if (currentPage.includes("idea.html")) {
             goto("home");
+        }
+        if (currentPage.includes("404.html")) {
+            console.log("pagina 404 - Pagina no encontrada")
+            //const querySnapshot = await getDocs(collection(db, 'posts'));
+            document.getElementById("goToLoginPage").classList.remove("hidden");
         }
         if (btnEmpecemos) {
             btnEmpecemos.textContent = "Empecemos";
