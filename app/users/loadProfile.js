@@ -1,5 +1,7 @@
 import { doc, getDoc, addDoc, collection } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"
 import { auth, db } from '../firebase.js'
+import { numStars } from '../../assets/js/rating.js';
+
 
 var urlParams = new URLSearchParams(window.location.search);
 // Obtener el valor de un parámetro específico
@@ -49,7 +51,7 @@ export const loadProfile = async () => {
         userCountry.textContent = user.country;
         userCountryInput.value = user.country;
         imagePreview.setAttribute("src", user.photoURL ?? "../assets/img/perfil.png");
-        rating.textContent = user.rating + "☆☆☆☆☆";
+        rating.innerHTML = numStars(user.rating);
         description.textContent = user.description;
         descriptionInput.value = user.description;
         userLinkedinInput.value = user.linkedin;

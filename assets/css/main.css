@@ -102,8 +102,15 @@ footer a {
     text-decoration: none;
 }
 
+.text-d-none{
+    text-decoration: none;
+}
+
 .color-white {
     color: white !important;
+}
+.color-yellow {
+    color: rgb(255, 208, 0) !important;
 }
 
 .change {

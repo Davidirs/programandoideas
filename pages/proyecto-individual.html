@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="../assets/css/main.css">
   <script type="module" src="../app/main.js"></script>
   <link rel="stylesheet" href="../assets/css/styles.css" />
+  <!-- toastify.js -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
 </head>
 
@@ -53,13 +55,14 @@
   <section class="placeholder-glow  m-4">
     <h1 id="name" class="placeholder">PROYECTO Individual</h1>
     <div class="d-flex justify-content-between">
-      <p class="placeholder">Publicación: <span id="dateposted">17/10/2023</span> | por: <span id="postautor">Autor</span> </p>
+      <p class="placeholder">Publicación: <span id="dateposted">17/10/2023</span> | por: <span
+          id="postautor">Autor</span> </p>
       <p>|</p>
       <p class="placeholder">Límite: <span id="datelimit">17/11/2023</span></p>
     </div>
-  
-  <div class="bg-dark-blue br-20 p-3">
-   <!--  <div class="d-flex flex-row br-20 justify-content-evenly max-height-400">
+
+    <div class="bg-dark-blue br-20 p-3">
+      <!--  <div class="d-flex flex-row br-20 justify-content-evenly max-height-400">
       <div class="bg-white col-10 d-flex justify-content-center">
         <img src="../assets/img/checked.png" alt="${post.img1}" class="h-100">
       </div>
@@ -70,76 +73,87 @@
         <img id="img4" src="../assets/img/checked.png" alt="${post.img4}" class="bg-white max-height-90">
       </div>
     </div> -->
-    
-    <div class="d-flex justify-content-evenly  max-height-400">
-      <a class="placeholder col-10 d-flex justify-content-center align-items-center bg-white me-3">
-        <img id="imggrande" alt=""  class="max-height-400">
-      </a>
-      <div class="d-flex flex-column justify-content-between">
-        <a id="aimg1" class="d-flex justify-content-center align-items-center bg-white pointer">
-          <img id="img1" alt=""  class="max-height-90 img1">
+
+      <div class="d-flex justify-content-evenly  max-height-400">
+        <a class="placeholder col-10 d-flex justify-content-center align-items-center bg-white me-3">
+          <img id="imggrande" alt="" class="max-height-400">
         </a>
-        <a id="aimg2" class="d-flex justify-content-center align-items-center bg-white pointer">
-          <img id="img2" alt=""  class="max-height-90 img2">
-        </a>
-        <a id="aimg3" class="d-flex justify-content-center align-items-center bg-white pointer">
-          <img id="img3" alt=""  class="max-height-90 img3">
-        </a>
-        <a id="aimg4" class="d-flex justify-content-center align-items-center bg-white pointer">
-          <img id="img4" alt=""  class="max-height-90 img4">
-        </a>
-        
+        <div class="d-flex flex-column justify-content-between">
+          <a id="aimg1" class="d-flex justify-content-center align-items-center bg-white pointer">
+            <img id="img1" alt="" class="max-height-90 img1">
+          </a>
+          <a id="aimg2" class="d-flex justify-content-center align-items-center bg-white pointer">
+            <img id="img2" alt="" class="max-height-90 img2">
+          </a>
+          <a id="aimg3" class="d-flex justify-content-center align-items-center bg-white pointer">
+            <img id="img3" alt="" class="max-height-90 img3">
+          </a>
+          <a id="aimg4" class="d-flex justify-content-center align-items-center bg-white pointer">
+            <img id="img4" alt="" class="max-height-90 img4">
+          </a>
+
+        </div>
       </div>
     </div>
-    </div>
-</section>
-<section class="m-4">
-  
-  <h3 class="py-4">Descripción</h3>
-  <div class="bg-white br-20 p-4">
-    <p id="description" class="placeholder">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sint quae laborum rerum magnam quam ipsa
-      laudantium vel? Fugiat sapiente architecto aliquam ut minus maxime voluptatibus, quasi quis ab dolore!</p>
-    <div class="row">
+  </section>
+  <section class="m-4">
 
-      <h2 id="type" class="placeholder col-6">Web</h2>
-      <h2  class="placeholder col-6 text-end"><span id="rating"></span> ☆ ☆ ☆ ☆ ☆</h2>
-    </div>
-    <div class="row  align-items-center">
+    <h3 class="py-4">Descripción</h3>
+    <div class="bg-white br-20 p-4">
+      <p id="description" class="placeholder">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+        sint quae laborum rerum magnam quam ipsa
+        laudantium vel? Fugiat sapiente architecto aliquam ut minus maxime voluptatibus, quasi quis ab dolore!</p>
+      <div class="row">
 
-      <div class="col-6 d-flex flex-wrap justify-content-evenly">
-        <a href="" class="placeholder button br-20 btn-gradient mb-2">Unirme como Desarrollador</a>
-        <a href="" class="placeholder button br-20 btn-gradient">Unirme como Inversor</a>
+        <h2 id="type" class="placeholder col-6">Web</h2>
+        <h2 class="placeholder col-6 text-end color-yellow"><span id="rating"></span></h2>
       </div>
-      <div class="placeholder col-6 text-end"> Fondo: <span id="amount" >0.00</span> / <span id="maxamount">0.00</span>  USD</div>
+      <div class="row  align-items-center">
+
+        <div class="col-6 d-flex flex-wrap justify-content-evenly">
+          <a id="joindeveloper" class="placeholder button br-20 btn-gradient mb-2 pointer">Unirme como Desarrollador</a>
+          <a id="joininvestor" class="placeholder button br-20 btn-gradient  mb-2 pointer">Unirme como Inversor</a>
+        </div>
+        <div class="placeholder col-6 text-end"> Fondo: <span id="amount">0.00</span> / <span id="maxamount">0.00</span>
+          USD</div>
+      </div>
     </div>
-  </div>
-  <h3 class="py-4">Recurso humano</h3>
-  <div class="bg-white br-20 p-4">
-    <p id="infodeveloper" class="placeholder">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sint quae laborum rerum magnam quam ipsa
-      laudantium vel? Fugiat sapiente architecto aliquam ut minus maxime voluptatibus, quasi quis ab dolore!</p>
-    
-  </div>
-  <h3 class="py-4">Información para los inversores</h3>
-  <div class="bg-white br-20 p-4">
-    <p id="infoinvestor" class="placeholder">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit sint quae laborum rerum magnam quam ipsa
-      laudantium vel? Fugiat sapiente architecto aliquam ut minus maxime voluptatibus, quasi quis ab dolore!</p>
-    
-  </div>
-  
-</section>
+    <h3 class="py-4">Recurso humano</h3>
+    <div class="bg-white br-20 p-4">
+      <p id="infodeveloper" class="placeholder">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+        sint quae laborum rerum magnam quam ipsa
+        laudantium vel? Fugiat sapiente architecto aliquam ut minus maxime voluptatibus, quasi quis ab dolore!</p>
+        <h5>Desarrolladores: <span id="developers"></span></h5>
+      </div>
+      <h3 class="py-4">Información para los inversores</h3>
+      <div class="bg-white br-20 p-4">
+        <p id="infoinvestor" class="placeholder">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+          sint quae laborum rerum magnam quam ipsa
+          laudantium vel? Fugiat sapiente architecto aliquam ut minus maxime voluptatibus, quasi quis ab dolore!</p>
+          <h5>Inversores: <span id="investors"></span></h5>
+
+    </div>
+
+  </section>
 
   <div id="footer"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/script.js"></script>
+
+  <!-- Insertar FontAwesome -->
+  <script src="https://kit.fontawesome.com/9fd95bcc65.js" crossorigin="anonymous"></script>
+
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <!-- Toastify -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="../app/post/loadPost.js" type="module"></script>
   <!-- Cambiar Imagen -->
   <script src="../assets/js/changeImg.js"></script>
-  
-    <!-- routing -->
-    <script src="../assets/js/routing.js"></script>
+
+  <!-- routing -->
+  <script src="../assets/js/routing.js"></script>
 
 </body>
 

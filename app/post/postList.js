@@ -1,4 +1,6 @@
+import { numStars } from '../../assets/js/rating.js';
 import { imageList } from '../storage/imageList.js';
+import { idToEmail } from '../users/infoUser.js';
 const postList = document.querySelector(".posts");
 
 export const setupPost = (data) => {
@@ -6,7 +8,7 @@ export const setupPost = (data) => {
   if (data.length) {
     let html = "";
 
-    data.forEach(doc => {
+    data.forEach(async doc => {
       const post = doc.data()
       var id = doc.id;
       //saber si estoy en github
@@ -17,7 +19,12 @@ export const setupPost = (data) => {
       }
       // Construir la URL con los parámetros
       var url = nameProyect + '/pages/proyecto-individual.html?id=' + id;
-
+      const userID=`
+      <a onclick="gotoPerfil('${post.user}')" class="pointer text-d-none mx-2">
+      <i class="fa-solid fa-user"></i>
+      ${await idToEmail(post.user)}
+      </a>
+      `;
       const li = `
             <div class="bg-dark-blue br-20 p-3 m-4">
           <div class="row justify-content-evenly">
@@ -30,8 +37,9 @@ export const setupPost = (data) => {
               </div>
               <h2>${post.name}</h2>
               <p>${post.description}</p>
+             <h5>Publicado por: <a class="col-12">${userID}</a></h5>
               <h5 class="col-6">${post.type}</h5>
-              <h5 class="col-6 text-end">${post.rating}☆ ☆ ☆ ☆ ☆</h5>
+              <h5 class="col-6 text-end color-yellow">${numStars(post.rating)}</h5>
               <div class="col-6">
                 <a href="${url}" class="button br-20 btn-gradient">Conoce más</a>
               </div>

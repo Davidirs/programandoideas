@@ -1,6 +1,6 @@
-import { addDoc,doc, collection,updateDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"
+import { addDoc, doc, collection, updateDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"
 import { db } from '../../app/firebase.js'
-import {showMessage } from '../showMessage.js'
+import { showMessage } from '../showMessage.js'
 
 
 export const addPost = async (post) => {
@@ -23,16 +23,18 @@ export const addPost = async (post) => {
             rating: "0",
             dateposted: post.dateposted,
             datelimit: post.datelimit,
+            developers: [],
+            investors: [],
         });
-       console.log(docRef.id)
-       const docRef2 = doc(db, "posts", docRef.id);
-       await updateDoc(docRef2, { id: docRef.id });
-        
-        
-        showMessage("Publicación agregada","success");
+        console.log(docRef.id)
+        const docRef2 = doc(db, "posts", docRef.id);
+        await updateDoc(docRef2, { id: docRef.id });
+
+
+        showMessage("Publicación agregada", "success");
         goto('proyectos');
-                    
+
     } catch (e) {
-        showMessage("Error al intentar agregar " +e)
+        showMessage("Error al intentar agregar " + e)
     }
 }

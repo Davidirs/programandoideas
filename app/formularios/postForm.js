@@ -32,7 +32,7 @@ for (let i = 0; i < 4; i++) {
 }
 postForm.addEventListener('submit', async e => {
     e.preventDefault();
-    const user = auth.currentUser.email;
+    const user = auth.currentUser.uid;
     for (let i = 0; i < imgList.length; i++) {
         if (imgList[i].name) {
             imgList[i].url = await saveImage(user, imgList[i].name, imgList[i].data);
