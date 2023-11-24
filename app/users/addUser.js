@@ -11,19 +11,21 @@ export const addUser = async (user) => {
     const userActual = auth.currentUser;
     try {
         if (docSnap.exists()) {
-            console.log(user)
-           
+            console.log(auth.currentUser)
+            
         } else {
             // docSnap.data() will be undefined in this case
             //showMessage("No existe agregando valores!");
+            console.log(auth.currentUser)
             await setDoc(docRef, {
+                //"authuser": auth.currentUser,
                 "uid": user.uid,
                 "displayName": user.displayName??"Usuario",
                 "status": "Pendiente",
                 "email": user.email,
                 "country": user.country ?? "",
                 "photoURL": user.photoURL,
-                "rating": userActual.rating ?? 0,
+                "rating": user.rating ?? 0,
                 "description": user.description ?? "",
                 //redes sociales
                 "facebook": user.facebook ?? "",

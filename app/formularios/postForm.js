@@ -45,10 +45,10 @@ postForm.addEventListener('submit', async e => {
     const infodeveloper = postForm["post-infodeveloper"].value;
 
 
-    const img1 = imgList[0].url; //postForm["image-picker0"].files[0] ? postForm["image-picker0"].files[0].name : "";
-    const img2 = imgList[1].url; //postForm["image-picker1"].files[0] ? postForm["image-picker1"].files[0].name : "";
-    const img3 = imgList[2].url; //postForm["image-picker2"].files[0] ? postForm["image-picker2"].files[0].name : "";
-    const img4 = imgList[3].url; //postForm["image-picker3"].files[0] ? postForm["image-picker3"].files[0].name : "";
+    const img1 = imgList[0].url??""; //postForm["image-picker0"].files[0] ? postForm["image-picker0"].files[0].name : "";
+    const img2 = imgList[1].url??""; //postForm["image-picker1"].files[0] ? postForm["image-picker1"].files[0].name : "";
+    const img3 = imgList[2].url??""; //postForm["image-picker2"].files[0] ? postForm["image-picker2"].files[0].name : "";
+    const img4 = imgList[3].url??""; //postForm["image-picker3"].files[0] ? postForm["image-picker3"].files[0].name : "";
     const infoinvestor = postForm["post-infoinvestor"].value;
     const minamount = postForm["post-minamount"].value;
     const maxamount = postForm["post-maxamount"].value;

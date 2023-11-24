@@ -60,7 +60,7 @@ onAuthStateChanged(auth, async (user) => {
         if (currentPage.includes("sign-in-out.html")) {
             console.log("pagina Inicio de sesion")
             //const querySnapshot = await getDocs(collection(db, 'posts'));
-            goto("home")
+            //goto("home")
         }
         
         if (currentPage.includes("perfil.html")) {

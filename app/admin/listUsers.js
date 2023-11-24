@@ -1,7 +1,7 @@
 
 import { auth } from "../firebase.js";
 import { showMessage } from "../showMessage.js";
-import { blockUser, editUser, activeUser } from "./acciones.js";
+import { blockUser, editUser, activeUser, deletingUser } from "./acciones.js";
 
 
 const userList = document.querySelector(".users");
@@ -79,6 +79,9 @@ export const listUsers = (data) => {
       });
       bloquear[i].addEventListener("click", () => {
         blockUser(data[i].data().uid)
+      });
+      eliminar[i].addEventListener("click", () => {
+        deletingUser(data[i].data().uid)
       });
     }
   } else {

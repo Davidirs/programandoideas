@@ -1,4 +1,4 @@
-import { addDoc, collection } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"
+import { addDoc,doc, collection,updateDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"
 import { db } from '../../app/firebase.js'
 import {showMessage } from '../showMessage.js'
 
@@ -8,6 +8,7 @@ export const addPost = async (post) => {
         const docRef = await addDoc(collection(db, "posts"), {
             user: post.user,
             name: post.name,
+            status: "Mostrando",
             description: post.description,
             type: post.type,
             infodeveloper: post.infodeveloper,
@@ -23,6 +24,9 @@ export const addPost = async (post) => {
             dateposted: post.dateposted,
             datelimit: post.datelimit,
         });
+       console.log(docRef.id)
+       const docRef2 = doc(db, "posts", docRef.id);
+       await updateDoc(docRef2, { id: docRef.id });
         
         
         showMessage("Publicación agregada","success");
