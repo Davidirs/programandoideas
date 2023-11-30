@@ -1,16 +1,35 @@
-.active-tab, .active-tab a {
-    font-weight: bold; 
-    color: #11bfd8; 
-  }
-.vh-90{
+.active-tab,
+.active-tab a {
+  font-weight: bold;
+  color: #11bfd8;
+}
+
+.vh-90 {
   height: 90vh;
 }
-.mh-100vh{
+
+.mh-100vh {
   min-height: 100vh;
 }
-#login-form a, #signup-form a{
+
+#login-form a,
+#signup-form a {
   width: 30px;
   display: flex;
   justify-content: center;
   text-decoration: none;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .imggrande {
+    display: flex;
+    justify-content: center;
+  }
+
+  .imggrande img {
+    max-height: 300px;
+  }
+
 }

@@ -1,6 +1,7 @@
 import { doc, getDoc, addDoc, collection } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"
 import { auth, db } from '../firebase.js'
 import { numStars } from '../../assets/js/rating.js';
+import { loadData } from "./loadData.js";
 
 
 var urlParams = new URLSearchParams(window.location.search);
@@ -100,8 +101,10 @@ export const loadProfile = async () => {
             placeholders[i].classList.remove("placeholder");
 
         }
+        loadData(id);
     }
     catch (error) {
+        console.log(error)
         goto("p404");
     }
 

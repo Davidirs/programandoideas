@@ -62,7 +62,7 @@
 
         <section class="bg-dark-blue br-20 p-4 m-4">
 
-            <div class="d-flex bg-white br-20 m-4 p-4">
+            <div class="d-flex flex-column-reverse flex-lg-row justify-content-center align-items-center bg-white br-20 m-4 p-4">
                 <article class="col-8 d-flex flex-column justify-content-evenly">
                     <div class="d-flex placeholder">
                         <h3 class="col-6">Nombre para mostrar:</h3>
@@ -73,11 +73,11 @@
                         <h3 class="col-6">Estado:</h3>
                         <h2 class="user-status">Activo</h2>
                     </div>
-                    <div class="d-flex placeholder">
+                    <div class="d-flex flex-column flex-md-row placeholder">
                         <h3 class="col-6">Correo:</h3>
                         <h2 class="user-email">reyisacc@gmail.com</h2>
                     </div>
-                    <div class="d-flex placeholder">
+                    <div class="d-flex flex-column flex-md-row placeholder">
                         <h3 class="col-6">Nacionalidad:</h3>
                         <h2 class="user-country no-hidden">Venezolana</h2>
                         <input type="text" id="user-country" class="br-20 form-control hidden" placeholder="Nacionalidad" />
@@ -99,7 +99,7 @@
 
             </div>
             <article class="bg-white m-4 p-4 br-20">
-                <div class="placeholder d-flex">
+                <div class="placeholder d-flex flex-column flex-md-row">
                     <h3 class="col-4">Descripción:</h3>
                     <p class="no-hidden user-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi doloribus
                         asperiores beatae! Et
@@ -109,8 +109,8 @@
                         class="br-20 form-control hidden"></textarea>
                 </div>
                 
-                <div class="placeholder d-flex  align-items-center">
-                    <h3 class="col-4">Redes sociales:</h3>
+                <div class="placeholder d-flex flex-column flex-md-row">
+                    <h3 class="col-5">Redes sociales:</h3>
                     <ul class="w-100 d-flex justify-content-evenly align-items-center list-social">
                         <li class="d-flex w-100 justify-content-center align-items-center li-linkedin">
                             <a href="" target="_blank"  class="user-linkedin icon-social"><i class="fa-brands fa-linkedin"></i></a>
@@ -145,10 +145,12 @@
         <section class="bg-dark-blue p-4 br-20 m-4">
             <article class="m-4 bg-white">
                 <h3 class="placeholder">Proyectos publicados</h3>
-                <table class="table table-light">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
+                <div class="table-responsive">
+
+                    <table class="table table-light">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
                             <th scope="col">Nombre de post</th>
                             <th scope="col">Fecha de post</th>
                             <th scope="col">Estado</th>
@@ -156,37 +158,17 @@
                             <th scope="col">Valoración</th>
                         </tr>
                     </thead>
-                    <tbody class=" posts">
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Post 1</td>
-                            <td>01/05/23</td>
-                            <td>Publicado</td>
-                            <td>0.00</td>
-                            <td>☆☆☆☆☆</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Nombre</td>
-                            <td>05/11/95</td>
-                            <td>Activo</td>
-                            <td>0.00</td>
-                            <td>☆☆☆☆☆</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Mi nombre</td>
-                            <td>20/11/23</td>
-                            <td>Bloqueado</td>
-                            <td>0.00</td>
-                            <td>☆☆☆☆☆</td>
-                        </tr>
+                    <tbody class="posts-own">
+                        
                     </tbody>
                 </table>
+                            </div>
             </article>
             <article class="m-4 bg-white">
                 <h3 class="placeholder">Proyectos como desarrollador</h3>
-                <table class="table table-light">
+                <div class="table-responsive">
+
+                    <table class="table table-light">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -198,35 +180,21 @@
                             <th scope="col">Valoración</th>
                         </tr>
                     </thead>
-                    <tbody class="posts">
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Post 1</td>
-                            <td>01/05/23</td>
-                            <td>reyisacc@gmail.com</td>
-                            <td>Publicado</td>
-                            <td>0.00</td>
-                            <td>☆☆☆☆☆</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Nombre</td>
-                            <td>05/11/95</td>
-                            <td>reyisacc@gmail.com</td>
-                            <td>Activo</td>
-                            <td>0.00</td>
-                            <td>☆☆☆☆☆</td>
-                        </tr>
+                    <tbody class="posts-dev">
+                        
                     </tbody>
                 </table>
+                    </div>
             </article>
             <article class="m-4 bg-white">
                 <h3 class="placeholder">Proyectos como inversor</h3>
-                <table class="table table-light">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nombre de post</th>
+                <div class="table-responsive">
+                    
+                    <table class="table table-light">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre de post</th>
                             <th scope="col">Fecha de post</th>
                             <th scope="col">Autor</th>
                             <th scope="col">Estado</th>
@@ -234,27 +202,11 @@
                             <th scope="col">Valoración</th>
                         </tr>
                     </thead>
-                    <tbody class="posts">
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Post 1</td>
-                            <td>01/05/23</td>
-                            <td>reyisacc@gmail.com</td>
-                            <td>Publicado</td>
-                            <td>0.00</td>
-                            <td>☆☆☆☆☆</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Nombre</td>
-                            <td>05/11/95</td>
-                            <td>reyisacc@gmail.com</td>
-                            <td>Activo</td>
-                            <td>0.00</td>
-                            <td>☆☆☆☆☆</td>
-                        </tr>
+                    <tbody class="posts-inv">
+                        
                     </tbody>
                 </table>
+            </div>
             </article>
         </section>
     </div>

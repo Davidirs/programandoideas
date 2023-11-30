@@ -31,9 +31,10 @@
                         Usuario
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item pointer" onclick="goto('perfil')" id="perfil" >Perfil</a></li>
+                        <li><a class="dropdown-item pointer" onclick="goto('perfil')" id="perfil">Perfil</a></li>
                         <li>
-                        <li><a class="dropdown-item onlyAdmin hidden pointer" onclick="goto('dashboard')">Tablero</a></li>
+                        <li><a class="dropdown-item onlyAdmin hidden pointer" onclick="goto('dashboard')">Tablero</a>
+                        </li>
                         <li>
                         <li><a class="dropdown-item pointer" onclick="goto('publicar')">Publicar Idea</a></li>
                         <li>
@@ -61,7 +62,7 @@
         document.getElementById("inicio").classList.add("active-tab");
     } else if (currentPage.includes("proyectos.html")) {
         document.getElementById("proyectos").classList.add("active-tab");
-    }else if (currentPage.includes("sign-in-out.html")) {
+    } else if (currentPage.includes("sign-in-out.html")) {
         console.log("acceder page")
         document.getElementById("acceder").classList.add("active-tab");
     }
@@ -98,50 +99,79 @@
     function acceder() {
         goto('signin');
     }
+
+    /* Controlar darkmode */
+    const btn = document.getElementById("darkmode");
     
-/* Controlar darkmode */
-const btn= document.getElementById("darkmode");
-let darkmodekey = localStorage.getItem("darkmode");
+    function darkmode() {
+        let darkmodekey = localStorage.getItem("darkmode");
+        console.log(darkmodekey);
+        let bgDarkBlue = document.querySelectorAll(".bg-dark-blue");
+        let btnGradient = document.querySelectorAll(".btn-gradient");
+        let bgLight = document.querySelectorAll(".bg-light");
+        let bgWhite = document.querySelectorAll(".bg-white");
+        let tables = document.querySelectorAll(".table");
+        let bgLightGrey = document.querySelectorAll(".bg-light-grey");
+        if (darkmodekey=="true") {
+            btn.classList.remove("fa-sun")
+            btn.classList.add("fa-moon")
+            bgDarkBlue.forEach(bg => {/* 
+        bg.classList.toggle("bg-dark-blue") */
+                bg.classList.add("bg-dark")
+            });
+            btnGradient.forEach(boton => {/* 
+        bg.classList.toggle("bg-dark-blue") */
+                boton.classList.add("dark")
+            });
+            bgLight.forEach(bg => {
+                bg.classList.add("bg-dark")
+                bg.classList.add("text-white")
+            });
+            bgWhite.forEach(bg => {
+                bg.classList.add("dark")
+            });
+            tables.forEach(bg => {/* 
+        bg.classList.toggle("bg-dark-blue") */
+                bg.classList.add("table-dark")
+            });
+            bgLightGrey.forEach(bg => {/* 
+        bg.classList.toggle("bg-dark-blue") */
+                bg.classList.add("bg-dark-grey")
+            });
+        } else {
+            btn.classList.add("fa-sun")
+            btn.classList.remove("fa-moon")
+            bgDarkBlue.forEach(bg => {/* 
+        bg.classList.toggle("bg-dark-blue") */
+                bg.classList.remove("bg-dark")
+            });
+            btnGradient.forEach(boton => {/* 
+        bg.classList.toggle("bg-dark-blue") */
+                boton.classList.remove("dark")
+            });
+            bgLight.forEach(bg => {
+                bg.classList.remove("bg-dark")
+                bg.classList.remove("text-white")
+            });
+            bgWhite.forEach(bg => {
+                bg.classList.remove("dark")
+            });
+            tables.forEach(bg => {/* 
+        bg.classList.toggle("bg-dark-blue") */
+                bg.classList.remove("table-dark")
+            });
+            bgLightGrey.forEach(bg => {/* 
+        bg.classList.toggle("bg-dark-blue") */
+                bg.classList.remove("bg-dark-grey")
+            });
 
-function darkmode(){
-    let bgDarkBlue= document.querySelectorAll(".bg-dark-blue");
-    let btnGradient= document.querySelectorAll(".btn-gradient");
-    let bgLight= document.querySelectorAll(".bg-light");
-    let bgWhite= document.querySelectorAll(".bg-white");
-    let tables = document.querySelectorAll(".table");
-    let bgLightGrey= document.querySelectorAll(".bg-light-grey");
-
-    btn.classList.toggle("fa-sun")
-    btn.classList.toggle("fa-moon")
-    bgDarkBlue.forEach(bg=>{/* 
-        bg.classList.toggle("bg-dark-blue") */
-        bg.classList.toggle("bg-dark")
-    });
-    btnGradient.forEach(boton=>{/* 
-        bg.classList.toggle("bg-dark-blue") */
-        boton.classList.toggle("dark")
-    });
-    bgLight.forEach(bg=>{
-        bg.classList.toggle("bg-dark")
-        bg.classList.toggle("text-white")
-    });
-    bgWhite.forEach(bg=>{
-        bg.classList.toggle("dark")
-    });
-    tables.forEach(bg=>{/* 
-        bg.classList.toggle("bg-dark-blue") */
-        bg.classList.toggle("table-dark")
-    });
-    bgLightGrey.forEach(bg=>{/* 
-        bg.classList.toggle("bg-dark-blue") */
-        bg.classList.toggle("bg-dark-grey")
-    });
-    if(darkmodekey=== null || darkmodekey=== "false"){
-        localStorage.setItem("darkmode","true")
-    }else{
-        localStorage.setItem("darkmode","false")
+        }
+        if (darkmodekey === null || darkmodekey === "false") {
+            localStorage.setItem("darkmode", "true")
+        } else {
+            localStorage.setItem("darkmode", "false")
+        }
     }
-}
 
 </script>
 

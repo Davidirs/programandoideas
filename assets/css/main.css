@@ -168,3 +168,11 @@ footer a {
     font-size: xx-large;
     margin: 10px;
   }
+  ul{
+    list-style: none;
+  }
+
+  
+#imggrande{
+    height: 200px;
+  }
